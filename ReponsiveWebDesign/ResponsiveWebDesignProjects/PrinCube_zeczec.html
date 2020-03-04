@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang='zh-Hant'>
+
+<head prefix='og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# zeczec-com: http://ogp.me/ns/fb/zeczec-com#'>
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta name="csrf-token"
+        content="J6muqeEFX8H10ZX4/q5lG3HADqQf/xR0BtcgniLXZ3uySjoivcryyXgzq7igdSIzlp8vfXn0UvxLEoDT7GmRXQ==" />
+    <meta charset='utf-8'>
+    <script
+        type="text/javascript">window.NREUM || (NREUM = {}); NREUM.info = { "beacon": "bam.nr-data.net", "errorBeacon": "bam.nr-data.net", "licenseKey": "6df56d3465", "applicationID": "2801605", "transactionName": "JQpcTUVZXVhcF01GEwkPV1pDRR5HUQoV", "queueTime": 6, "applicationTime": 589, "agent": "" }</script>
+    <script
+        type="text/javascript">(window.NREUM || (NREUM = {})).loader_config = { licenseKey: "6df56d3465", applicationID: "2801605" }; window.NREUM || (NREUM = {}), __nr_require = function (e, n, t) { function r(t) { if (!n[t]) { var i = n[t] = { exports: {} }; e[t][0].call(i.exports, function (n) { var i = e[t][1][n]; return r(i || n) }, i, i.exports) } return n[t].exports } if ("function" == typeof __nr_require) return __nr_require; for (var i = 0; i < t.length; i++)r(t[i]); return r }({ 1: [function (e, n, t) { function r() { } function i(e, n, t) { return function () { return o(e, [u.now()].concat(f(arguments)), n ? null : this, t), n ? void 0 : this } } var o = e("handle"), a = e(4), f = e(5), c = e("ee").get("tracer"), u = e("loader"), s = NREUM; "undefined" == typeof window.newrelic && (newrelic = s); var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"], l = "api-", d = l + "ixn-"; a(p, function (e, n) { s[n] = i(l + n, !0, "api") }), s.addPageAction = i(l + "addPageAction", !0), s.setCurrentRouteName = i(l + "routeName", !0), n.exports = newrelic, s.interaction = function () { return (new r).get() }; var m = r.prototype = { createTracer: function (e, n) { var t = {}, r = this, i = "function" == typeof n; return o(d + "tracer", [u.now(), e, t], r), function () { if (c.emit((i ? "" : "no-") + "fn-start", [u.now(), r, i], t), i) try { return n.apply(this, arguments) } catch (e) { throw c.emit("fn-err", [arguments, this, e], t), e } finally { c.emit("fn-end", [u.now()], t) } } } }; a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (e, n) { m[n] = i(d + n) }), newrelic.noticeError = function (e, n) { "string" == typeof e && (e = new Error(e)), o("err", [e, u.now(), !1, n]) } }, {}], 2: [function (e, n, t) { function r(e, n) { var t = e.getEntries(); t.forEach(function (e) { "first-paint" === e.name ? c("timing", ["fp", Math.floor(e.startTime)]) : "first-contentful-paint" === e.name && c("timing", ["fcp", Math.floor(e.startTime)]) }) } function i(e, n) { var t = e.getEntries(); t.length > 0 && c("lcp", [t[t.length - 1]]) } function o(e) { if (e instanceof s && !l) { var n, t = Math.round(e.timeStamp); n = t > 1e12 ? Date.now() - t : u.now() - t, l = !0, c("timing", ["fi", t, { type: e.type, fid: n }]) } } if (!("init" in NREUM && "page_view_timing" in NREUM.init && "enabled" in NREUM.init.page_view_timing && NREUM.init.page_view_timing.enabled === !1)) { var a, f, c = e("handle"), u = e("loader"), s = NREUM.o.EV; if ("PerformanceObserver" in window && "function" == typeof window.PerformanceObserver) { a = new PerformanceObserver(r), f = new PerformanceObserver(i); try { a.observe({ entryTypes: ["paint"] }), f.observe({ entryTypes: ["largest-contentful-paint"] }) } catch (p) { } } if ("addEventListener" in document) { var l = !1, d = ["click", "keydown", "mousedown", "pointerdown", "touchstart"]; d.forEach(function (e) { document.addEventListener(e, o, !1) }) } } }, {}], 3: [function (e, n, t) { function r(e, n) { if (!i) return !1; if (e !== i) return !1; if (!n) return !0; if (!o) return !1; for (var t = o.split("."), r = n.split("."), a = 0; a < r.length; a++)if (r[a] !== t[a]) return !1; return !0 } var i = null, o = null, a = /Version\/(\S+)\s+Safari/; if (navigator.userAgent) { var f = navigator.userAgent, c = f.match(a); c && f.indexOf("Chrome") === -1 && f.indexOf("Chromium") === -1 && (i = "Safari", o = c[1]) } n.exports = { agent: i, version: o, match: r } }, {}], 4: [function (e, n, t) { function r(e, n) { var t = [], r = "", o = 0; for (r in e) i.call(e, r) && (t[o] = n(r, e[r]), o += 1); return t } var i = Object.prototype.hasOwnProperty; n.exports = r }, {}], 5: [function (e, n, t) { function r(e, n, t) { n || (n = 0), "undefined" == typeof t && (t = e ? e.length : 0); for (var r = -1, i = t - n || 0, o = Array(i < 0 ? 0 : i); ++r < i;)o[r] = e[n + r]; return o } n.exports = r }, {}], 6: [function (e, n, t) { n.exports = { exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart } }, {}], ee: [function (e, n, t) { function r() { } function i(e) { function n(e) { return e && e instanceof r ? e : e ? c(e, f, o) : o() } function t(t, r, i, o) { if (!l.aborted || o) { e && e(t, r, i); for (var a = n(i), f = v(t), c = f.length, u = 0; u < c; u++)f[u].apply(a, r); var p = s[y[t]]; return p && p.push([b, t, r, a]), a } } function d(e, n) { h[e] = v(e).concat(n) } function m(e, n) { var t = h[e]; if (t) for (var r = 0; r < t.length; r++)t[r] === n && t.splice(r, 1) } function v(e) { return h[e] || [] } function g(e) { return p[e] = p[e] || i(t) } function w(e, n) { u(e, function (e, t) { n = n || "feature", y[t] = n, n in s || (s[n] = []) }) } var h = {}, y = {}, b = { on: d, addEventListener: d, removeEventListener: m, emit: t, get: g, listeners: v, context: n, buffer: w, abort: a, aborted: !1 }; return b } function o() { return new r } function a() { (s.api || s.feature) && (l.aborted = !0, s = l.backlog = {}) } var f = "nr@context", c = e("gos"), u = e(4), s = {}, p = {}, l = n.exports = i(); l.backlog = s }, {}], gos: [function (e, n, t) { function r(e, n, t) { if (i.call(e, n)) return e[n]; var r = t(); if (Object.defineProperty && Object.keys) try { return Object.defineProperty(e, n, { value: r, writable: !0, enumerable: !1 }), r } catch (o) { } return e[n] = r, r } var i = Object.prototype.hasOwnProperty; n.exports = r }, {}], handle: [function (e, n, t) { function r(e, n, t, r) { i.buffer([e], r), i.emit(e, n, t) } var i = e("ee").get("handle"); n.exports = r, r.ee = i }, {}], id: [function (e, n, t) { function r(e) { var n = typeof e; return !e || "object" !== n && "function" !== n ? -1 : e === window ? 0 : a(e, o, function () { return i++ }) } var i = 1, o = "nr@id", a = e("gos"); n.exports = r }, {}], loader: [function (e, n, t) { function r() { if (!x++) { var e = E.info = NREUM.info, n = d.getElementsByTagName("script")[0]; if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && n)) return s.abort(); u(y, function (n, t) { e[n] || (e[n] = t) }), c("mark", ["onload", a() + E.offset], null, "api"); var t = d.createElement("script"); t.src = "https://" + e.agent, n.parentNode.insertBefore(t, n) } } function i() { "complete" === d.readyState && o() } function o() { c("mark", ["domContent", a() + E.offset], null, "api") } function a() { return O.exists && performance.now ? Math.round(performance.now()) : (f = Math.max((new Date).getTime(), f)) - E.offset } var f = (new Date).getTime(), c = e("handle"), u = e(4), s = e("ee"), p = e(3), l = window, d = l.document, m = "addEventListener", v = "attachEvent", g = l.XMLHttpRequest, w = g && g.prototype; NREUM.o = { ST: setTimeout, SI: l.setImmediate, CT: clearTimeout, XHR: g, REQ: l.Request, EV: l.Event, PR: l.Promise, MO: l.MutationObserver }; var h = "" + location, y = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", agent: "js-agent.newrelic.com/nr-1167.min.js" }, b = g && w && w[m] && !/CriOS/.test(navigator.userAgent), E = n.exports = { offset: f, now: a, origin: h, features: {}, xhrWrappable: b, userAgent: p }; e(1), e(2), d[m] ? (d[m]("DOMContentLoaded", o, !1), l[m]("load", r, !1)) : (d[v]("onreadystatechange", i), l[v]("onload", r)), c("mark", ["firstbyte", f], null, "api"); var x = 0, O = e(6) }, {}], "wrap-function": [function (e, n, t) { function r(e) { return !(e && e instanceof Function && e.apply && !e[a]) } var i = e("ee"), o = e(5), a = "nr@original", f = Object.prototype.hasOwnProperty, c = !1; n.exports = function (e, n) { function t(e, n, t, i) { function nrWrapper() { var r, a, f, c; try { a = this, r = o(arguments), f = "function" == typeof t ? t(r, a) : t || {} } catch (u) { l([u, "", [r, a, i], f]) } s(n + "start", [r, a, i], f); try { return c = e.apply(a, r) } catch (p) { throw s(n + "err", [r, a, p], f), p } finally { s(n + "end", [r, a, c], f) } } return r(e) ? e : (n || (n = ""), nrWrapper[a] = e, p(e, nrWrapper), nrWrapper) } function u(e, n, i, o) { i || (i = ""); var a, f, c, u = "-" === i.charAt(0); for (c = 0; c < n.length; c++)f = n[c], a = e[f], r(a) || (e[f] = t(a, u ? f + i : i, o, f)) } function s(t, r, i) { if (!c || n) { var o = c; c = !0; try { e.emit(t, r, i, n) } catch (a) { l([a, t, r, i]) } c = o } } function p(e, n) { if (Object.defineProperty && Object.keys) try { var t = Object.keys(e); return t.forEach(function (t) { Object.defineProperty(n, t, { get: function () { return e[t] }, set: function (n) { return e[t] = n, n } }) }), n } catch (r) { l([r]) } for (var i in e) f.call(e, i) && (n[i] = e[i]); return n } function l(n) { try { e.emit("internal-error", n) } catch (t) { } } return e || (e = i), t.inPlace = u, t.flag = a, t } }, {}] }, {}, ["loader"]);</script>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <meta content='zh_TW' property='og:locale'>
+    <meta content='zh_TW' property='og:locale:alternate'>
+    <link href='/assets/logo-square-04c45286e84ea49d07c97c86625fbf3a75f4f32dd02da3ad3ca70a9a68fd0395.png'
+        rel='apple-touch-icon'>
+    <link href='/assets/fav-69601a279a66f2e6e31e508900d4f057559d3affcae42730d045b17d281107a6.png' rel='shortcut icon'
+        type='image/x-icon'>
+    <title>嘖嘖 × 【 PrinCube - 地表最小彩色口袋式印刷神器 】輕輕一滑，隨時隨地印出你的個性生活！
+    </title>
+    <link href='https://fonts.googleapis.com/css?family=Karla:400,700|Material+Icons' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" media="all"
+        href="/assets/zeczec-b858513b76f99f8df3f002da30f4d4f885e3b815a58e6e781f3ad9f1552af621.css" />
+    <meta content='171735882933694' property='fb:app_id'>
+    <meta content='zeczec-com:project' property='og:type'>
+    <meta content='嘖嘖 × 【 PrinCube - 地表最小彩色口袋式印刷神器 】輕輕一滑，隨時隨地印出你的個性生活！' property='og:title'>
+    <meta content='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146273_image_original.jpg?1577251010'
+        property='og:image'>
+    <meta
+        content='PrinCube 非常輕巧，可一手輕鬆掌握。讓你不論在禮物外包裝或個人物品上，都可以輕鬆快速的進行彩色印刷。透過 Wi-Fi 與手機連接，就可輕鬆上傳任何文字、圖像或設計。按下按鈕輕輕一滑，即可印出你獨一無二的專屬創作。'
+        property='og:description'>
+    <meta content='https://www.zeczec.com/projects/princube' property='og:url'>
+    <meta content='Thegodthings TW' property='zeczec-com:creator'>
+    <meta content='summary_large_image' name='twitter:card'>
+    <meta content='@zeczec_com' name='twitter:site'>
+    <meta content='嘖嘖 × 【 PrinCube - 地表最小彩色口袋式印刷神器 】輕輕一滑，隨時隨地印出你的個性生活！' name='twitter:title'>
+    <meta
+        content='PrinCube 非常輕巧，可一手輕鬆掌握。讓你不論在禮物外包裝或個人物品上，都可以輕鬆快速的進行彩色印刷。透過 Wi-Fi 與手機連接，就可輕鬆上傳任何文字、圖像或設計。按下按鈕輕輕一滑，即可印出你獨一無二的專屬創作。'
+        name='twitter:description'>
+    <meta content='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146273_image_original.jpg?1577251010'
+        name='twitter:image'>
+    <meta content='zeczec.com' name='twitter:domain'>
+</head>
+
+<body>
+    <header class='b--near-white bb ph0-l ph3 pv2 relative z-2'>
+        <div class='cf container'>
+            <div class='f6 mv2 flex items-center justify-between'>
+                <a clsas="dib order-0" href="https://www.zeczec.com/">
+                    <h1 class='gray text-mono hover-logo ma0'>
+                        <div class='dib logo-safari-fix'><svg class='logo v-mid' style='height: 28px; width: 28px; '
+                                viewBox='0 0 138 138' xmlns='http://www.w3.org/2000/svg'>
+                                <title>zeczec</title>
+                                <path
+                                    d='M69 0a69 69 0 1 0 69 69A69 69 0 0 0 69 0zm38.7 75.53l-1.55 7.18c-.23 1.18-.81 1.54-1.82 1.49l-40.48-1.9a1.72 1.72 0 0 1-1.43-2.2l2.3-11.94a2.05 2.05 0 0 0-1.87-2.23l-31-2.09c-1 0-1.57-.66-1.57-1.82l1.16-6.81c.22-1.15.8-1.43 1.84-1.37l41.94 2.32a1.94 1.94 0 0 1 1.72 2.13l-2.19 12.13a1.88 1.88 0 0 0 1.87 2.1l30.06 1.39c.93 0 1.24.53 1.03 1.62z'>
+                                </path>
+                            </svg>
+                        </div>
+                        <svg class='v-mid ml2' style='height: 20px; width: 44px; ' viewBox='0 0 64.08 28.95'
+                            xmlns='http://www.w3.org/2000/svg'>
+                            <title>嘖嘖</title>
+                            <path
+                                d='M10.44 11.74h14.2a.6.6 0 0 0 .4-.75.61.61 0 0 0-.4-.44h-5.48a.42.42 0 0 1-.42-.42v-1.6a.42.42 0 0 1 .42-.42h5a.58.58 0 0 0 .42-.64.59.59 0 0 0-.42-.52h-5a.42.42 0 0 1-.42-.42V5.16a.42.42 0 0 1 .42-.42h5.72a.68.68 0 0 0 .42-.69.57.57 0 0 0-.42-.52h-5.72a.42.42 0 0 1-.42-.42V.47a.42.42 0 0 0-.34-.41h-1.67a.42.42 0 0 0-.5.43l.1 2.61a.42.42 0 0 1-.42.43h-5.34a.56.56 0 0 0-.42.55.69.69 0 0 0 .42.67h5.33a.42.42 0 0 1 .42.42v1.36a.42.42 0 0 1-.42.42h-4.74a.58.58 0 0 0-.43.57v.05a.59.59 0 0 0 .42.59h4.75a.42.42 0 0 1 .42.42v1.61a.42.42 0 0 1-.42.42h-5.47a.58.58 0 0 0-.42.59.63.63 0 0 0 .43.54zm14.04 1.73a.42.42 0 0 0-.42-.41H11.33a.7.7 0 0 0-.74.63v9.9a.75.75 0 0 0 .77.75l1.65-.05h10.81a.75.75 0 0 0 .76-.77c0-1.19-.08-3.67-.08-6.7V14.5zm-11.47 1.29a.42.42 0 0 1 .42-.42h8a.75.75 0 0 1 .75.75v7a.75.75 0 0 1-.75.75h-8a.42.42 0 0 1-.42-.42m-5.44-1.53a.42.42 0 0 0 .39-.43c0-1.37-.14-13.17-.14-13.17a.42.42 0 0 0-.42-.42h-7a.42.42 0 0 0-.42.43v13.16a.42.42 0 0 0 .47.42h7.12zm-2-2.41a.42.42 0 0 1-.42.42H2.74a.42.42 0 0 1-.42-.42V8.84a.42.42 0 0 1 .42-.42h2.41a.42.42 0 0 1 .42.42v9.64z'>
+                            </path>
+                            <path
+                                d='M16.307 23.2l.808 1.057-5.972 4.57a.59.59 0 0 1-.827-.11l-.456-.596a.59.59 0 0 1 .11-.824l5.504-4.21a.59.59 0 0 1 .827.11zM49.01 11.74h14.2a.6.6 0 0 0 .4-.75.61.61 0 0 0-.4-.44h-5.48a.42.42 0 0 1-.42-.42v-1.6a.42.42 0 0 1 .42-.42h5a.58.58 0 0 0 .42-.64.59.59 0 0 0-.42-.52h-5a.42.42 0 0 1-.42-.42V5.16a.42.42 0 0 1 .42-.42h5.72a.68.68 0 0 0 .42-.69.57.57 0 0 0-.42-.52h-5.72a.42.42 0 0 1-.42-.42V.47a.42.42 0 0 0-.34-.41H55.3a.42.42 0 0 0-.5.43l.1 2.61a.42.42 0 0 1-.42.43h-5.32a.56.56 0 0 0-.42.55.69.69 0 0 0 .42.67h5.33a.42.42 0 0 1 .42.42v1.36a.42.42 0 0 1-.42.42h-4.74a.58.58 0 0 0-.43.57v.05a.59.59 0 0 0 .42.59h4.75a.42.42 0 0 1 .42.42v1.61a.42.42 0 0 1-.42.42h-5.47a.58.58 0 0 0-.42.59.63.63 0 0 0 .41.54zm14.04 1.73a.42.42 0 0 0-.42-.41H49.9a.7.7 0 0 0-.74.63v9.9a.75.75 0 0 0 .77.75l1.65-.05h10.81a.75.75 0 0 0 .76-.77c0-1.19-.08-3.67-.08-6.7V14.5zm-11.48 1.29a.42.42 0 0 1 .42-.42h8a.75.75 0 0 1 .75.75v7a.75.75 0 0 1-.75.75h-8a.42.42 0 0 1-.42-.42m-5.41-1.53a.42.42 0 0 0 .39-.43c0-1.37-.14-13.17-.14-13.17a.42.42 0 0 0-.42-.42h-7a.42.42 0 0 0-.42.43v13.16a.42.42 0 0 0 .47.42h7.12zm-2-2.41a.42.42 0 0 1-.42.42h-2.41a.42.42 0 0 1-.42-.42V8.84a.42.42 0 0 1 .42-.42h2.41a.42.42 0 0 1 .42.42v9.64zm-25.984 5.764l.754-.985a.59.59 0 0 1 .827-.11l5.504 4.21a.59.59 0 0 1 .11.825l-.453.596a.59.59 0 0 1-.827.11l-5.9-4.514a.09.09 0 0 1-.02-.126z'>
+                            </path>
+                            <path
+                                d='M54.943 23.217l.808 1.056-5.97 4.57a.59.59 0 0 1-.826-.11l-.45-.588a.59.59 0 0 1 .11-.827l5.504-4.21a.59.59 0 0 1 .827.11zm1.857 1.037l.753-.985a.59.59 0 0 1 .828-.11l5.506 4.21a.59.59 0 0 1 .11.825l-.455.596a.59.59 0 0 1-.827.11l-5.9-4.514a.09.09 0 0 1-.012-.134zm-5.87-7.534l.11.63a.3.3 0 0 0 .28.29l3.32.16a.3.3 0 0 1 .27.36l-.34 1.23a.3.3 0 0 0 .27.36l6.32.28a.3.3 0 0 0 .31-.3v-.67a.3.3 0 0 0-.29-.29h-3.77a.3.3 0 0 1-.28-.36l.32-1.32a.3.3 0 0 0-.28-.36l-5.87-.29a.3.3 0 0 0-.37.28zm-38.53 0l.11.63a.3.3 0 0 0 .28.29l3.32.16a.3.3 0 0 1 .27.36l-.39 1.23a.3.3 0 0 0 .27.36l6.32.28a.3.3 0 0 0 .31-.3v-.67a.3.3 0 0 0-.29-.29h-3.77a.3.3 0 0 1-.28-.36l.32-1.32a.3.3 0 0 0-.28-.36l-5.87-.29a.3.3 0 0 0-.32.28z'>
+                            </path>
+                        </svg>
+                    </h1>
+                </a>
+                <div
+                    class='b--near-white bn-ns bt db-ns flex-auto inline-flex items-center mh0-ns mt0-ns mt3 nb1 nl3 nr3 order-1-ns order-last pa0-ns ph2 pt2 tc tl-ns w-100 w-auto-ns'>
+                    <div class='divider dib-ns dn'>&nbsp;</div>
+                    <a class='mr3-ns hover-fg-blue dark-gray flex-auto flex-none-ns' href='/categories'>探索</a>
+                    <a class='mr3-ns hover-fg-blue dark-gray flex-auto flex-none-ns' href='/stories'>故事牆</a>
+                    <a class='mr3-ns hover-fg-blue dark-gray flex-auto flex-none-ns' href='/start_project'>提案</a>
+                </div>
+                <div class='tr order-2'>
+                    <a aria-label='站內訊息' class='near-black dib gray pa2 mr3 v-mid tooltip tooltip-b' href='/inbox'>
+                        <i class='material-icons f5 v-mid'>
+                            notifications_none
+                        </i>
+                    </a>
+                    <div class='js-activatable relative dib' data-userid='960109'>
+                        <button aria-label='個人選單' class='js-activatable-trigger button-text' type='button'>
+                            <div class='button button-s button-avatar round w2 h2 b--light-gray'><img
+                                    class="w-100 h-100"
+                                    src="https://graph.facebook.com/3073165009365937/picture?width=60&amp;height=60"
+                                    alt="Picture?width=60&amp;height=60" /></div>
+                            <i class='material-icons f4 v-mid'>arrow_drop_down</i>
+                        </button>
+                        <div class='dropdown r f6 tc w4'>
+                            <a class='near-black db ph3 pv2 hover-blue db dn-l' href='/categories'>探索</a>
+                            <a class='near-black db ph3 pv2 hover-blue db dn-l' href='/start_project'>提案</a>
+                            <div class='bt db dn-l mv2 b--light-gray'></div>
+                            <a class='near-black db ph3 pv2 hover-blue bb b--light-gray' href='/users/dr-k'>
+                                個人頁面
+                            </a>
+                            <a class='near-black db ph3 pv2 hover-blue' href='/account'>
+                                贊助記錄
+                            </a>
+                            <a class='near-black db ph3 pv2 hover-blue' href='/users/following'>
+                                追蹤計畫
+                            </a>
+                            <a class='near-black db ph3 pv2 hover-blue' href='/users/projects'>
+                                提案記錄
+                            </a>
+                            <a class='near-black db ph3 pv2 hover-blue bt b--light-gray' href='/settings'>
+                                帳號設定
+                            </a>
+                            <a class='near-black db ph3 pv2 hover-blue bb b--light-gray' href='/memberships'>
+                                團隊設定
+                            </a>
+                            <form class="db ma3" id="edit_user_960109" action="/users/sign_out" accept-charset="UTF-8"
+                                method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden"
+                                    name="_method" value="delete" /><input type="hidden" name="authenticity_token"
+                                    value="FxTBp5+S9ADQh7DJVg3T+aH+wAwWz6BVkjcUqXUP/dOC91Usw11ZCF1ljokI1pTRRqHh1XDE5t3f8rTku7EL9Q==" /><button
+                                    name="button" type="submit" class="button red button-s w-100">登出</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class='container'></div>
+    <div class='container mv4-l mt3-l'>
+        <div class='gutter3-l flex'>
+            <div class='w-70-l w-100 ph3-l'>
+                <div class='js-sticky-video relative right-0 w-100 bottom-0 mw7'>
+                    <button class='button-text ph2 pointer js-undo-sticky-video absolute right-0 nt4' hidden
+                        type='button'>
+                        <i class='material-icons f4'>expand_less</i>
+                    </button>
+                    <div class='overflow-hidden aspect-ratio-project-cover bg-near-white br2-l'
+                        style="background-image: url('https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146273_image_big.jpg?1577251010')">
+                        <iframe allowfullscreen class='absolute absolute--fill js-video'
+                            data-url='https://www.youtube.com/embed/Kgnhj59CghU?autohide=1&amp;iv_load_policy=3&amp;origin=zeczec.com&amp;showinfo=0&amp;rel=0&amp;title=0&amp;byline=0&amp;portrait=0&amp;playsinline=1'
+                            frameborder='0' height='100%' width='100%'></iframe>
+                        <button
+                            class='absolute absolute-center video-play-button js-play-video button-l button bg-black white'
+                            data-track='PlayVideo#princube'>Play &blacktriangleright;</button>
+                    </div>
+                </div>
+                <div class='mt3 ph0-l ph3 relative cf flex'>
+                    <div class='flex-auto self-center relative'>
+                        <div class='relative cf'>
+                            <button aria-label='複製網址'
+                                class='pointer tooltip tooltip-l button-text z-1 relative fr pt2 ph2' data-copy='#share'
+                                data-track='CopyShareUrl#projects#show' type='button'><i
+                                    class='material-icons f6'>content_copy</i></button>
+                            <div class='pv1 pl3 pr2 br b--light-gray absolute f7 z-1'>
+                                分享網址
+                                <i aria-label='記錄推薦人資料'
+                                    class='material-icons f6 pl1 v-mid tooltip tooltip-r gray'>help</i>
+                            </div>
+                            <div class='w-100 relative db'>
+                                <input class='hover-green b--light-gray js-auto-select absolute w-100 ma0'
+                                    contenteditable id='share' readonly=''
+                                    style='padding-left: 7em; padding-right: 2em;' type='text'
+                                    value='https://www.zeczec.com/projects/princube?r=k5111960109'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='f6 ph0-l ph3 bb bt bn-l b--light-gray pv2 mt3 pt0-l'>
+                    <div class='dib bg-washed-red lh-solid pa1 br2 mr1'>
+                        <i class='material-icons light-red f6 v-mid'>favorite</i>
+                    </div>
+                    <span class='v-mid'>你和<a href="/users/clownlemon0622"> Meng Jyun Lai </a>贊助了這個專案。</span>
+                </div>
+            </div>
+            <div class='w-30-l w-100 ph3'>
+                <div class='mt0-l mt3'>
+                    <div class='f6 gray'>
+                        <a class='dark-gray b dib' href='/categories?type=crowdfunding'>群眾集資</a>
+                        <div class='dib mh2'>&vert;</div>
+                        <a class='gray b dib' href='/categories?category=8'>設計</a>
+                    </div>
+                </div>
+                <a href="/projects/princube">
+                    <h2 class='f4 mt2 mb2'>【 PrinCube - 地表最小彩色口袋式印刷神器 】輕輕一滑，隨時隨地印出你的個性生活！</h2>
+                </a><span class='gray f6'>
+                    By
+                </span>
+                <a class="b text-s ml-5 mr2" href="/users/Thegodthings-tw">Thegodthings TW
+                </a><a aria-label='Facebook' class='ml1 lh-0 relaitve dib tooltip tooltip-t'
+                    href='https://www.facebook.com/Thegodthings-TW-106141977521535/' target='_blank'>
+                    <svg height='12' viewBox='0 0 266.893 266.895' width='12' xmlns='http://www.w3.org/2000/svg'>
+                        <path
+                            d='M182.409 262.307v-99.803h33.499l5.016-38.895h-38.515V98.777c0-11.261 3.127-18.935 19.275-18.935l20.596-.009V45.045c-3.562-.474-15.788-1.533-30.012-1.533-29.695 0-50.025 18.126-50.025 51.413v28.684h-33.585v38.895h33.585v99.803h40.166z'
+                            fill='#555555'></path>
+                    </svg>
+                </a>
+                <a aria-label='Instagram' class='ml2 lh-0 relaitve dib tooltip tooltip-t'
+                    href='https://www.instagram.com/thegodthings_tw/' target='_blank'>
+                    <svg height='11' viewBox='0 0 512 512' width='11' xmlns='http://www.w3.org/2000/svg'>
+                        <path
+                            d='M256 52.5c67.3 0 75.2.3 101.8 1.5 24.6 1.1 37.9 5.2 46.8 8.7 11.8 4.6 20.2 10 29 18.8s14.3 17.2 18.8 29c3.4 8.9 7.6 22.2 8.7 46.8 1.2 26.6 1.5 34.5 1.5 101.8s-.3 75.2-1.5 101.8c-1.1 24.6-5.2 37.9-8.7 46.8-4.6 11.8-10 20.2-18.8 29s-17.2 14.3-29 18.8c-8.9 3.4-22.2 7.6-46.8 8.7-26.6 1.2-34.5 1.5-101.8 1.5s-75.2-.3-101.8-1.5c-24.6-1.1-37.9-5.2-46.8-8.7-11.8-4.6-20.2-10-29-18.8s-14.3-17.2-18.8-29c-3.4-8.9-7.6-22.2-8.7-46.8-1.2-26.6-1.5-34.5-1.5-101.8s.3-75.2 1.5-101.8c1.1-24.6 5.2-37.9 8.7-46.8 4.6-11.8 10-20.2 18.8-29s17.2-14.3 29-18.8c8.9-3.4 22.2-7.6 46.8-8.7 26.6-1.3 34.5-1.5 101.8-1.5m0-45.4c-68.4 0-77 .3-103.9 1.5C125.3 9.8 107 14.1 91 20.3c-16.6 6.4-30.6 15.1-44.6 29.1S23.8 77.5 17.3 94c-6.2 16-10.5 34.3-11.7 61.2C4.4 182 4.1 190.6 4.1 259s.3 77 1.5 103.9c1.2 26.8 5.5 45.1 11.7 61.2 6.4 16.6 15.1 30.6 29.1 44.6s28.1 22.6 44.6 29.1c16 6.2 34.3 10.5 61.2 11.7s35.4 1.5 103.9 1.5 77-.3 103.9-1.5c26.8-1.2 45.1-5.5 61.2-11.7 16.6-6.4 30.6-15.1 44.6-29.1s22.6-28.1 29.1-44.6c6.2-16 10.5-34.3 11.7-61.2 1.2-26.9 1.5-35.4 1.5-103.9s-.3-77-1.5-103.9c-1.2-26.8-5.5-45.1-11.7-61.2-6.4-16.6-15.1-30.6-29.1-44.6s-28.1-22.6-44.6-29.1C405.2 14 386.9 9.7 360 8.5c-27-1.1-35.6-1.4-104-1.4z'
+                            fill='#555555'></path>
+                        <path
+                            d='M256 129.6c-71.4 0-129.4 57.9-129.4 129.4s58 129.4 129.4 129.4 129.4-58 129.4-129.4-58-129.4-129.4-129.4zm0 213.4c-46.4 0-84-37.6-84-84s37.6-84 84-84 84 37.6 84 84-37.6 84-84 84z'
+                            fill='#555555'></path>
+                        <circle cx='390.5' cy='124.5' fill='#555555' r='30.2'></circle>
+                    </svg>
+                </a>
+                <p class='f6 gray mv3'>PrinCube 非常輕巧，可一手輕鬆掌握。讓你不論在禮物外包裝或個人物品上，都可以輕鬆快速的進行彩色印刷。透過 Wi-Fi
+                    與手機連接，就可輕鬆上傳任何文字、圖像或設計。按下按鈕輕輕一滑，即可...</p>
+                <div class='mv3 relative'>
+                    <svg class='mr3 nt2 progress sprint succeeded'>
+                        <circle class='progress-run js-percentage-circle' cx='32' cy='32' r='32'
+                            style='stroke-dasharray: 201 200'></circle>
+                        <text class='js-percentage-raised stroke' text-anchor='middle' transform='rotate(90)' x='32'
+                            y='-27'>
+                            30,363%
+                        </text>
+                        <text class='js-percentage-raised' text-anchor='middle' transform='rotate(90)' x='32' y='-27'>
+                            30,363%
+                        </text>
+                    </svg>
+                    <div class='f3 b js-sum-raised'>NT$30,363,620</div>
+                    <div class='f7 mt2'>
+                        目標 NT$100,000
+                    </div>
+                </div>
+                <div class='ph3-l'>
+                    <div class='bt b--light-gray pt3 nl3 nr3'></div>
+                </div>
+                <div class='mb1 f7'>
+                    <span class='mr2 b'>贊助人數</span>
+                    <span class='js-backers-count'>10598</span>
+                </div>
+                <div class='mb1 f7'>
+                    <span class='mr2 b'>剩餘時間</span>
+                    <span class='js-time-left'>3 天</span>
+                </div>
+                <div class='mb2 f7'>
+                    <span class='mr2 b'>時程</span>
+                    2019/12/25 11:00 &ndash; 2020/03/07 02:00
+                </div>
+                <a class='dark-gray b--silver b button button-xs mr2' data-track='ContactCreator#projects#show'
+                    href='/messages/new?user_id=944971'>
+                    <i class='material-icons f7 v-mid'>chat_bubble</i>
+                    聯絡提案人
+                </a>
+                <a class='button button-xs b--light-blue fb mr2 b' data-track='ShareFacebook#Dialog'
+                    href='https://www.facebook.com/sharer/sharer.php?u=https://www.zeczec.com/projects/princube?r=k5111960109'>
+                    FB
+                    <span class='js-counter ml1'
+                        data-url='https://www.zeczec.com/projects/princube?r=k5111960109'></span>
+                </a>
+                <a class='button button-xs twitter b' data-track='ShareTwitter#Dialog'
+                    href='https://www.twitter.com/share?text=嘖嘖 x 【 PrinCube - 地表最小彩色口袋式印刷神器 】輕輕一滑，隨時隨地印出你的個性生活！&amp;url=https://www.zeczec.com/projects/princube?r=k5111960109'>Tweet</a>
+            </div>
+        </div>
+    </div>
+    <div class='js-sticky-video-marker'></div>
+    <div class='bt bb light-gray ph3 ph0-l mt0-l mt3 top-0 bg-white z-1 sticky'>
+        <div class='container cf f6'>
+            <div class='gutter3 flex'>
+                <div class='mh3 mh0-ns ph0 ph3-ns w-70-l overflow-auto nowrap flex flex-nowrap'>
+                    <a class='b b--drak-gray bb-l dib hover-b--dark-gray mr4 mt1 near-black pv3'
+                        href='/projects/princube'>
+                        <div class='dib pv1'>專案內容</div>
+                    </a>
+                    <a class='b--transparent bb-l dib hover-b--dark-gray mr4 mt1 near-black pv3'
+                        href='/projects/princube/updates'>
+                        <div class='dib pv1'>專案更新</div>
+                        <span class='f7 b ml3 gray'>6</span>
+                    </a>
+                    <a class='b--transparent bb-l dib hover-b--dark-gray mr4 mt1 near-black pv3'
+                        href='/projects/princube/backers'>
+                        <div class='dib pv1'>支持人次</div>
+                        <span class='f7 b ml3 gray js-backers-count'>10598</span>
+                    </a>
+                    <a class='b--transparent bb-l dib hover-b--dark-gray mr4 mt1 near-black pv3'
+                        href='/projects/princube/comments'>
+                        <div class='dib pv1'>留言</div>
+                        <span class='f7 b ml3 gray'>78</span>
+                    </a>
+                    <a class='b--transparent bb-l dib hover-b--dark-gray mr4 mt1 near-black pv3'
+                        href='/projects/princube/faqs'>
+                        <div class='dib pv1'>常見問答</div>
+                        <span class='f7 b ml3 gray'>11</span>
+                    </a>
+                </div>
+                <div class='w-30-l pv3 ph3 tc w-100'>
+                    <div class='nt3 dn-l'></div>
+                    <a class='bg-white button w-100 green hover-green focus grow'
+                        href='/projects/princube/orders/back_project'>
+                        贊助專案
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='container mv4'>
+        <div class='gutter3-l flex'>
+            <div class='mb0 mb4 ph3 w-100 w-70-l'>
+                <div class='mv-child-0 nested-media lh-copy overflow-hidden overflow-visible-ns'>
+                    <a class="db mb4" href="/projects/princube/updates/10114">
+                        <div class='ba pa3 b--light-gray'>
+                            <div class='black mb3'>
+                                計畫更新<span class='gray f7 ml3'>發佈於 2020/03/03</span></div>
+                            <span class='b'>【 計畫更新 #6 】感謝募資突破3000萬！持久墨水用法更新 &amp; 出貨規劃說明。</span>
+                        </div>
+                    </a>
+                    <div
+                        class='js-expand-project-content maxh7 mb3 overflow-hidden relative maxh-none-ns mv-child-0 overflow-visible-ns'>
+                        <h4><b><span class="wysiwyg-color-green"><img alt=""
+                                        data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_157119_image_big.jpg?1582022230"></span></b>
+                        </h4>
+                        <div>
+                            <span class="wysiwyg-color-red"><b>電獺少女-女孩的科技日常<br></b></span><b><span
+                                    class="wysiwyg-color-green"><span class="wysiwyg-color-red">
+                                        <div class="aspect-ratio aspect-ratio--16x9 mv2"
+                                            style="transform:translateZ(0)"><iframe allow="autoplay; encrypted-media"
+                                                src="https://www.youtube.com/embed/j8hv0ku_q0I" width="560" height="315"
+                                                class="aspect-ratio--object z-0" webkitallowfullscreen=""
+                                                mozallowfullscreen="" allowfullscreen=""></iframe></div>
+                                    </span></span></b>
+                        </div>
+                        <h4 class="hide-child">
+                            <a name="h-%E9%9B%BB%E8%85%A6%E7%8E%8B%E9%98%BF%E9%81%94-%E6%9C%80%E5%B0%88%E6%A5%AD%E7%9A%843C%E7%94%A2%E5%93%81%EF%BC%8CAPP%E8%A9%95%E6%B8%AC%E7%B6%B2%E7%AB%99"
+                                class="nt6 absolute"></a><b><span class="wysiwyg-color-blue">電腦王阿達-最專業的3C產品，APP評測網站<a
+                                        href="#h-%E9%9B%BB%E8%85%A6%E7%8E%8B%E9%98%BF%E9%81%94-%E6%9C%80%E5%B0%88%E6%A5%AD%E7%9A%843C%E7%94%A2%E5%93%81%EF%BC%8CAPP%E8%A9%95%E6%B8%AC%E7%B6%B2%E7%AB%99"
+                                        class="gray child f6 v-mid absolute left-0-ns nl3-ns">#</a></span>
+                                <div class="aspect-ratio aspect-ratio--16x9 mv2" style="transform:translateZ(0)"><iframe
+                                        allow="autoplay; encrypted-media"
+                                        src="https://www.youtube.com/embed/SvVRf2o1MzI" width="560" height="315"
+                                        class="aspect-ratio--object z-0" webkitallowfullscreen="" mozallowfullscreen=""
+                                        allowfullscreen=""></iframe></div>
+                            </b>
+                        </h4>
+                        <h4 class="hide-child">
+                            <a name="h-%E5%86%8D%E4%BE%86%E7%9C%8B%E5%98%96%E5%98%96%E5%AE%98%E6%96%B9%E9%96%8B%E7%AE%B1%E5%BD%B1%E7%89%87%F0%9F%91%87%F0%9F%91%87%F0%9F%91%87"
+                                class="nt6 absolute"></a>再來看嘖嘖官方開箱影片👇👇👇<a
+                                href="#h-%E5%86%8D%E4%BE%86%E7%9C%8B%E5%98%96%E5%98%96%E5%AE%98%E6%96%B9%E9%96%8B%E7%AE%B1%E5%BD%B1%E7%89%87%F0%9F%91%87%F0%9F%91%87%F0%9F%91%87"
+                                class="gray child f6 v-mid absolute left-0-ns nl3-ns">#</a>
+                        </h4>
+                        <h4>
+                            <div class="aspect-ratio aspect-ratio--16x9 mv2" style="transform:translateZ(0)"><iframe
+                                    allow="autoplay; encrypted-media" src="https://www.youtube.com/embed/TwNCjIB81YY"
+                                    width="560" height="315" class="aspect-ratio--object z-0" webkitallowfullscreen=""
+                                    mozallowfullscreen="" allowfullscreen=""></iframe></div>
+                        </h4>
+                        <h3><b><span class="wysiwyg-color-green"><img alt=""
+                                        data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_160111_image_big.jpg?1583236443"></span></b>
+                        </h3>
+                        <h3 class="hide-child">
+                            <a name="h-%E3%80%90PrinCube%7C%C2%A0%E5%9C%B0%E8%A1%A8%E6%9C%80%E5%B0%8F%E5%BD%A9%E8%89%B2%E5%8F%A3%E8%A2%8B%E5%BC%8F%E5%8D%B0%E5%88%B7%E7%A5%9E%E5%99%A8%C2%A0%E3%80%91"
+                                class="nt6 absolute"></a>
+                            <b><span class="wysiwyg-color-green">【 PrinCube | </span></b><b><span
+                                    class="wysiwyg-color-green">地表最小彩色 </span></b><b><span
+                                    class="wysiwyg-color-green">口袋式</span></b><b><span class="wysiwyg-color-green"> 印刷神器
+                                </span></b><b><span class="wysiwyg-color-green">】</span></b><br>
+                            <a href="#h-%E3%80%90PrinCube%7C%C2%A0%E5%9C%B0%E8%A1%A8%E6%9C%80%E5%B0%8F%E5%BD%A9%E8%89%B2%E5%8F%A3%E8%A2%8B%E5%BC%8F%E5%8D%B0%E5%88%B7%E7%A5%9E%E5%99%A8%C2%A0%E3%80%91"
+                                class="gray child f6 v-mid absolute left-0-ns nl3-ns">#</a>
+                        </h3>
+                        <h3 class="hide-child">
+                            <a name="h-%E2%9C%94%C2%A0%E8%BC%95%E8%BC%95%E4%B8%80%E6%BB%91%EF%BC%8C%E9%9A%A8%E6%99%82%E9%9A%A8%E5%9C%B0%E5%8D%B0%E5%87%BA%E6%82%A8%E7%9A%84%E5%80%8B%E6%80%A7%E7%94%9F%E6%B4%BB%EF%BC%81"
+                                class="nt6 absolute"></a>✔ <b>輕輕一滑，隨時隨地印出您的個性生活！</b>
+                            <a href="#h-%E2%9C%94%C2%A0%E8%BC%95%E8%BC%95%E4%B8%80%E6%BB%91%EF%BC%8C%E9%9A%A8%E6%99%82%E9%9A%A8%E5%9C%B0%E5%8D%B0%E5%87%BA%E6%82%A8%E7%9A%84%E5%80%8B%E6%80%A7%E7%94%9F%E6%B4%BB%EF%BC%81"
+                                class="gray child f6 v-mid absolute left-0-ns nl3-ns">#</a>
+                        </h3>✅ 一手好掌握，輕鬆放進口袋，<b><span class="wysiwyg-color-blue">機身僅110g</span></b>。<br>✅
+                        搭配合適墨水，絕大部分生活中的物品及材料，都可輕鬆列印。<br>✅ 可在<span class="wysiwyg-color-blue"><b>粗糙</b></span>、<span
+                            class="wysiwyg-color-blue"><b>彎曲</b></span>和<span
+                            class="wysiwyg-color-blue"><b>不平坦</b></span>的產品表面上列印。<br>✅ 可在皮膚上印刷臨時的酷炫紋身。<br>✅
+                        操作方便設定簡單，<span class="wysiwyg-color-blue"><b>4步驟</b></span>即可輕鬆上手使用。<br>✅ 色彩逼真還原度高，<span
+                            class="wysiwyg-color-blue"><b>支援彩色列印</b></span>。<br>✅ <span
+                            class="wysiwyg-color-blue"><b>續航力強</b></span><span>，一次充電可連續使用6小時。續航長達1年待機時間。<br></span><b><br></b><img
+                            alt=""
+                            data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146223_image_big.jpeg?1577241315">▲
+                        全球募資金額突破 1 億，熱銷超過 2 萬組。<br><br>“ <b><span class="wysiwyg-color-green">TheGodThings</span></b> ”
+                        團隊，是一家專注於新技術和創新印刷研發的新創公司。今年我們帶著 PrinCube 在美國獲得極大的迴響。而在前測問卷期間，收到了<b><span
+                                class="wysiwyg-color-red">超過三萬個台灣消費者</span></b>對我們的回饋與建議，希望PrinCube能帶給大家更豐富的創意生活！<br><br>
+                        <p><img alt=""
+                                data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_144052_image_big.jpg?1576416941">
+                        </p>▲ 超過三萬名消費者對於 PrinCube
+                        的熱烈期待。<br><br>我們相信在未來的世界裡，個人化與獨特性是每個人所的追求的，創意與設計更無處不在生活之中。為了讓更多人能輕鬆獲得高品質的攜帶式列印體驗，讓我們向大家詳細介紹地表上<span
+                            class="wysiwyg-color-red"><b>最小</b></span>、<span
+                            class="wysiwyg-color-red"><b>最易用</b></span>、<span
+                            class="wysiwyg-color-red"><b>使用相容性最佳</b></span>的個人化印刷神器 - <span
+                            class="wysiwyg-color-green"><b>PrinCube</b></span>！<br><br>
+                        <p><img alt=""
+                                data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146106_image_big.jpg?1577178367">
+                        </p>
+                        <p><span class="wysiwyg-color-green"><b>PrinCube</b></span> 非常輕巧，可一手輕鬆掌握。讓你不論在<span
+                                class="wysiwyg-color-blue"><b><span
+                                        class="wysiwyg-color-red">禮物外包裝</span></b></span>或<span
+                                class="wysiwyg-color-blue"><b><span
+                                        class="wysiwyg-color-red">個人物品</span></b></span>上，都可以輕鬆快速的進行彩色印刷。透過 Wi-Fi
+                            與手機連接，就可輕鬆上傳任何文字、圖像或設計。按下按鈕輕輕一滑，即可印出你獨一無二的專屬印記。</p><img alt=""
+                            src="https://upload.cc/i1/2019/12/24/VShfFH.gif">▲ PrinCube在手，印出你專屬的創意生活。<p><br></p>
+                        <p><img alt=""
+                                data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146108_image_big.jpg?1577178470">
+                        </p>
+                        <p>卡片、信封、瓦愣紙、皮革、金屬、塑料、布料甚至木(竹)板。<span class="wysiwyg-color-green"><b>PrinCube</b></span>
+                            可為你實現生活中絕大部分的想像及創意。</p>
+                        <p><img alt=""
+                                data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146095_image_big.jpg?1577177864">▲
+                            搭配合適墨水，您可以使用 PrinCube 在生活中大部分的產品及材料表面，輕鬆列印。</p>
+                        <p><br></p>
+                        <p><img alt=""
+                                data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_144752_image_big.jpg?1576640178">
+                        </p>
+                        <p><span class="wysiwyg-color-green"><b>PrinCube</b></span>
+                            噴墨式的設計，可以讓你為生活配件或用品，增添更多個性化的設計與想像。ex. <span class="wysiwyg-color-red">鴨舌帽</span>、<span
+                                class="wysiwyg-color-red">瓦愣紙</span>、<span class="wysiwyg-color-red">皮包</span>、<span
+                                class="wysiwyg-color-red">紙杯</span>...等。</p>
+                        <p><img alt="" src="https://upload.cc/i1/2019/12/24/D9KsOn.gif">▲ 在合適的狀況下，PrinCube
+                            可在粗糙，彎曲和不平坦的產品表面上列印。</p>
+                        <p><br></p>
+                        <p><img alt=""
+                                data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146096_image_big.jpg?1577177897">▲
+                            你也可以用 PrinCube 在皮膚上印刷臨時的紋身。在安全的使用方式下，任何有創意的想法，PrinCube 都可以為你實現。</p>
+                        <p><br></p>
+                        <p><img alt=""
+                                data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146109_image_big.jpg?1577178510">
+                        </p>
+                        <p>革命性的設計，讓印刷從此不再枯燥乏味，侷限在辦公室中。<span class="wysiwyg-color-green"><b>PrinCube</b></span> 是無線的，可以透過
+                            Wi-Fi 操作。重量輕巧，容易攜帶。符合人體工學的設計，讓你一手就能輕鬆使用。<span class="wysiwyg-color-red">重量僅有 160g</span>
+                            (包含墨水匣)，是目前全球最輕巧的印刷機。</p>
+                        <p><img alt=""
+                                data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146097_image_big.jpg?1577177934">▲
+                            PrinCube 的尺寸只有 72 x 51 x 68 (mm)。輕巧方便，可以放進口袋裡，帶去任何地方旅行，讓你的創作沒有極限。</p>
+                        <p><br></p>
+                        <p><img alt=""
+                                data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146110_image_big.jpg?1577178553">
+                        </p>
+                        <p>實用及方便是 <span class="wysiwyg-color-green"><b>PrinCube</b></span> 的核心設計理念。不論 iPhone 或 Android
+                            都可以連接，輕鬆上手。當 <span class="wysiwyg-color-green"><b>PrinCube </b></span>透過掃描連上雲端 操作介面
+                            後，這款手掌般大小的印刷機就準備好了，只需<span class="wysiwyg-color-red">簡單4步驟</span>，即可輕鬆完成你的個人化創意。</p>
+                        <p><img alt=""
+                                data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146099_image_big.jpg?1577177965">▲
+                            PrinCube 可以透過 Wi-Fi 與您的手機或筆電連接，簡單地設定你想列印的圖像或文字。然後輕鬆按下 PrinCube 上的按鈕並輕輕滑動，就可以印出你的專屬設計。</p>
+                        <p><br></p>
+                        <p><img alt=""
+                                data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146111_image_big.jpg?1577178578">
+                        </p>
+                        <p>市面上攜帶式印刷機，大部分僅限於黑白色列印的功能。<span class="wysiwyg-color-green"><b>PrinCube </b></span>是<span
+                                class="wysiwyg-color-red">世界上</span><span><span
+                                    class="wysiwyg-color-red">最便利</span>的</span>的口袋式彩色印刷機。它採用最新的<span
+                                class="wysiwyg-color-red">三色熱噴墨技術</span>，提供生動的彩色印刷。從今天起，你豐富的創意與設計能量，可以用更完美的方式，呈現在日常生活的各個面向。
+                        </p>
+                        <p><img alt="" src="https://upload.cc/i1/2019/12/24/IoYwVp.gif">▲ PrinCube 色彩逼真還原度高，同時支援彩色列印。
+                        </p>
+                        <div>
+                            <div><br></div>
+                        </div>
+                        <p><img alt=""
+                                data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146107_image_big.jpg?1577178428"><br>
+                        </p>
+                        <p><img alt=""
+                                data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146113_image_big.jpg?1577178622">
+                        </p>
+                        <p><span class="wysiwyg-color-green"><b>PrinCube</b></span> 支援多行列印功能。在一般模式下，最大列印高度為 <span
+                                class="wysiwyg-color-red">14.29mm</span>，一次可列印約 <span
+                                class="wysiwyg-color-red">1.3公尺</span> 長。而在多行列印模式下，最多可以列印約 <span
+                                class="wysiwyg-color-red">3公尺</span> 長。因此，若你有列印較大尺寸的圖案需求，您可以藉由輕巧的 <b><span
+                                    class="wysiwyg-color-green">PrinCube</span></b>，開啟多行模式功能，配合輔助工具，將你的創意完美實現。</p>
+                        <p><img alt=""
+                                src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_144057_image_big.gif?1576417427">▲
+                            PrinCube 依照你的創意需求，支援多行列印。</p>
+                        <div><br></div>
+                        <p><img alt=""
+                                data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146114_image_big.jpg?1577178646">
+                        </p>
+                        <p><span class="wysiwyg-color-green"><b>PrinCube</b></span> 使用最新的電池規格。一次完整充電可以提供 <span
+                                class="wysiwyg-color-red">6小時</span> 的連續列印和 <span class="wysiwyg-color-red">1年</span>
+                            的待機時間，是市面上其他移動式印刷機的 <span class="wysiwyg-color-red">20倍</span>，高續航的電力特色，讓 <span
+                                class="wysiwyg-color-green"><b>PrinCube</b></span> 可以隨時待命，完美適應各種商務旅行及特殊的印刷需求。</p>
+                        <p><img alt="" src="https://upload.cc/i1/2019/12/24/K7gaxZ.gif">▲ PrinCube
+                            一次充電可以連續使用6小時和擁有1年的待機時間，隨時為你的創意待命。</p>
+                        <p><br></p>
+                        <p><img alt=""
+                                data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146116_image_big.jpg?1577178687">
+                        </p>
+                        <p><span class="wysiwyg-color-green"><b>PrinCube</b></span> 的<span
+                                class="wysiwyg-color-red">標準型墨水匣</span>適合在<span
+                                class="wysiwyg-color-red">紙製品</span>上印刷，如同傳統的印表機一樣，墨水在紙張上的附著性極佳，只要沒有碰到水或被汗水浸濕，你的創作都可以完美保存。而如果你有在<span
+                                class="wysiwyg-color-red">金屬</span>、<span
+                                class="wysiwyg-color-red">皮革</span>等表面列印的需求，我們也推出了<span
+                                class="wysiwyg-color-red">持久型墨水匣</span>，它具有更好的耐久性以及基本的防水性。此外，一盒墨水匣可以列印 <span
+                                class="wysiwyg-color-red">415張</span> 的 <span
+                                class="wysiwyg-color-red">A4紙</span>！讓你印到手軟，創作不間斷！</p>
+                        <p>★ 需要加購墨水匣？請直接選擇<span class="wysiwyg-color-red">標準型</span>或<span
+                                class="wysiwyg-color-red">持久型</span>兩種墨水匣的方案做贊助，屆時即會與你的 <span
+                                class="wysiwyg-color-green"><b>PrinCube</b></span> 一起出貨。</p>
+                        <p><img alt="" src="https://upload.cc/i1/2019/12/24/Wd4GCQ.gif">▲ 當需要更換墨水匣時，只需打開
+                            PrinCube，放入新的墨水匣，幾秒鐘內即可輕鬆完成，繼續列印。</p>
+                        <p><br></p>
+                        <p><img alt=""
+                                data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_144760_image_big.jpg?1576640388">
+                        </p>
+                        <p><span class="wysiwyg-color-green"><b>PrinCube</b></span> 的設計特色除了<span
+                                class="wysiwyg-color-red">輕巧好攜帶</span>、<span
+                                class="wysiwyg-color-red">符合人體工程學</span>之外。更將極簡理念發揮到極致，所有的列印操作都通過<span
+                                class="wysiwyg-color-red">一個按鈕</span>進行控制即可。並採用最新的 <span class="wysiwyg-color-red">USB
+                                Type-C</span> 接頭充電，符合現代行動生活方式的趨勢及需求，絕對是你前所未有的絕佳體驗。</p>
+                        <p><img alt=""
+                                data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_143580_image_big.jpg?1576131710">▲
+                            PrinCube 採用最新的 USB Type-C 接頭充電，一鍵按鈕即可輕鬆使用。</p>
+                        <p><br></p>
+                        <p><img alt=""
+                                data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146118_image_big.jpg?1577178785">
+                        </p>
+                        <p>此外，我們設計了一個有趣的附加功能，讓 <span class="wysiwyg-color-green"><b>PrinCube</b></span> 更加貼心獨特。它的 <span
+                                class="wysiwyg-color-red">私密列印功能</span> 允許兩個使用者之間 <span
+                                class="wysiwyg-color-red">共享加密訊息</span>。發送的信息只有在列印出來之後才會顯示，是情侶或好友之間傳情或分享秘密訊息的好方法。</p>
+                        <p><img alt="" src="https://upload.cc/i1/2019/12/24/RX2xyh.gif">▲ PrinCube
+                            獨家的私密列印功能，讓你在生活中擁有更多驚喜。</p>
+                        <p><br></p>
+                        <p><img alt=""
+                                data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146119_image_big.jpg?1577178805">
+                        </p>
+                        <p><span class="wysiwyg-color-green"><b>PrinCube</b></span> 身為領導品牌，了解智慧型產品，技術變化很快。因此 <span
+                                class="wysiwyg-color-green"><b>PrinCube</b></span> 支援 <span
+                                class="wysiwyg-color-red">API
+                                二次開發</span>，以滿足開發商現在和未來的獨特需求。在未來的升級中，我們將持續提供給所有用戶更多創新與方便的設計。<br></p>
+                        <p><img alt=""
+                                data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_143582_image_big.jpg?1576131849">▲
+                            PrinCube 支援 API 二次開發，為未來的升級做準備。</p>
+                        <p><br></p>
+                        <p><img alt=""
+                                data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_143585_image_big.jpg?1576132000">
+                        </p>
+                        <img alt=""
+                            data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_144058_image_big.jpg?1576417577"><img
+                            alt=""
+                            data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146163_image_big.jpg?1577192125"><br>★
+                        <span>由於<span class="wysiwyg-color-red">金屬</span> / <span class="wysiwyg-color-red">玻璃 </span>/
+                            <span class="wysiwyg-color-red">塑膠</span>等材料表面光滑，同時因各地溫度濕度不同，會導致中性顏料墨水 (<span
+                                class="wysiwyg-color-red">持久型墨水</span></span><span
+                            class="wysiwyg-color-red">匣</span><span>) 變乾時間不一。如果您追求更快更好的持久墨水效果，可以另外購買定型清漆（<span
+                                class="wysiwyg-color-red">Varnish Spray</span>）配合使用，在列印完成之後噴上清漆定型。相關購買連結請參考 "<span
+                                class="wysiwyg-color-red">常見問答</span>"。<br><br></span><img alt=""
+                            data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_143586_image_big.jpg?1576132038"><img
+                            alt=""
+                            data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146164_image_big.jpg?1577192216"><img
+                            alt=""
+                            data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146165_image_big.jpg?1577192241"><br>
+                        <div class="aspect-ratio aspect-ratio--16x9 mv2" style="transform:translateZ(0)"><iframe
+                                allow="autoplay; encrypted-media" src="https://www.youtube.com/embed/8FXOCkAjx1Q"
+                                width="560" height="315" class="aspect-ratio--object z-0" webkitallowfullscreen=""
+                                mozallowfullscreen="" allowfullscreen=""></iframe></div><br><img alt=""
+                            data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_143588_image_big.jpg?1576132076"><img
+                            alt=""
+                            data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_147258_image_big.jpeg?1577765492"><img
+                            alt=""
+                            data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_147393_image_big.jpg?1577785968"><img
+                            alt=""
+                            data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146293_image_big.jpeg?1577259193"><img
+                            alt=""
+                            data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146228_image_big.jpg?1577241523"><img
+                            alt=""
+                            data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_147431_image_big.jpg?1577787272"><img
+                            alt=""
+                            data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_147430_image_big.jpg?1577787240"><img
+                            alt=""
+                            data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_147400_image_big.jpg?1577786113"><img
+                            alt=""
+                            data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_147402_image_big.jpg?1577786132"><img
+                            alt=""
+                            data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146295_image_big.jpg?1577259314"><img
+                            alt=""
+                            data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146296_image_big.jpg?1577259336"><br><img
+                            alt=""
+                            data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146168_image_big.jpg?1577192328">
+                        <div>“ <span class="wysiwyg-color-green"><b>The God Things </b></span>”是一家致力於新技術和創新印刷解決方案的新創公司。
+                            由美國紐約和中國深圳的跨國團隊組成。該團隊擁有<span class="wysiwyg-color-red">噴墨列印技術</span>，<span
+                                class="wysiwyg-color-red">工業設計</span>和<span
+                                class="wysiwyg-color-red">軟體開發</span>等各領域的專家。</div>
+                        <div><br></div>
+                        <div>我們的目標是使所有人都可以輕鬆獲得高品質的<span class="wysiwyg-color-red">攜帶式印刷機</span>。 我們花費了多年的研發時間來創建 <span
+                                class="wysiwyg-color-green"><b>PrinCube</b></span>，並準備與世界分享這項前所未有的全新體驗！<br><br><img
+                                alt=""
+                                data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146016_image_big.jpg?1577169388"><br><img
+                                alt=""
+                                data-img-src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_146224_image_big.jpeg?1577241364"><br>
+                        </div>
+                        <h3 class="hide-child">
+                            <a name="h-%EF%BD%9C%E5%94%AE%E5%BE%8C%E4%BF%9D%E5%9B%BA" class="nt6 absolute"></a>｜售後保固<a
+                                href="#h-%EF%BD%9C%E5%94%AE%E5%BE%8C%E4%BF%9D%E5%9B%BA"
+                                class="gray child f6 v-mid absolute left-0-ns nl3-ns">#</a>
+                        </h3>在嘖嘖購買的用戶們，<span class="wysiwyg-color-green"><b>PrinCube</b></span> 提供<span
+                            class="wysiwyg-color-red">自收件日起一年保固</span>。針對產品因原物料瑕疵或是生產製造瑕疵，而導致無法正常使用的狀況，提供維修及更換服務。請您提供購買
+                        <span class="wysiwyg-color-green"><b>PrinCube</b></span> 的贊助序號或相關資訊，並提供 照片 / 影片 /
+                        詳細描述，向小編提出申請。一年的免費保固服務不包含因維修更換產品而產生的<span class="wysiwyg-color-red">運輸費</span>或<span
+                            class="wysiwyg-color-red">郵寄費</span>，贊助者將負責產品之退還運費。<br>
+                        <h3 class="hide-child">
+                            <a name="h-%EF%BD%9C%E9%A2%A8%E9%9A%AA%E8%88%87%E6%89%BF%E8%AB%BE"
+                                class="nt6 absolute"></a>｜風險與承諾<a
+                                href="#h-%EF%BD%9C%E9%A2%A8%E9%9A%AA%E8%88%87%E6%89%BF%E8%AB%BE"
+                                class="gray child f6 v-mid absolute left-0-ns nl3-ns">#</a>
+                        </h3>
+                        <ol>
+                            <li>PrinCube 在 Indiegogo 集資成功後，現在已經進入正式量產發貨階段，預計 2020
+                                年四月份可以出貨給台灣的贊助者們，後續產品進度或有提前發貨可能都將持續更新於嘖嘖頁面與粉絲專頁。</li>
+                            <li>依照消費者保護法的規定，您享有商品貨到次日起七天猶豫期的權益。但請注意：猶豫期並非試用期，您所退回的商品必須回復原狀（需回復至商品到貨時的原始狀態）並且保持完整包裝（包括商品本體、配件、贈品、保證書、原廠包裝及所有附隨文件或資料的完整性），切勿缺漏任何配件或損毀原廠外盒，若因此產生整新費用等必要支出，將由您負擔，且不受限無條件退貨之規範。
+                            </li>
+                        </ol>
+                        <h3 class="hide-child">
+                            <a name="h-%EF%BD%9C%E5%AE%A2%E6%9C%8D%E5%B0%88%E5%8D%80" class="nt6 absolute"></a>｜客服專區<br>
+                            <a href="#h-%EF%BD%9C%E5%AE%A2%E6%9C%8D%E5%B0%88%E5%8D%80"
+                                class="gray child f6 v-mid absolute left-0-ns nl3-ns">#</a>
+                        </h3>
+                        <ol>
+                            <li>有關使用方式、規格、服務及其他產品常見問題，請參考頁面上方「<a rel="nofollow"
+                                    href="https://www.zeczec.com/projects/princube/faqs">常見問答</a>」之內容！</li>
+                            <li>其他問題歡迎請在粉專聯繫：(上班時間小編才在喔！訊息眾多，請耐心等候)</li>
+                        </ol>
+                        <ul>
+                            <li>臉書客服：<a rel="nofollow"
+                                    href="https://www.messenger.com/t/106141977521535">https://www.messenger.com/t/106141977521535</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>粉絲專頁：<a rel="nofollow"
+                                    href="https://www.facebook.com/Thegodthings-TW-106141977521535/">https://www.facebook.com/Thegodthings-TW-106141977521535/</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class='mb4 button dark-gray w-100 js-expand-project dn-ns'
+                        data-track='MobileClick#ExpandContent' style='box-shadow: 0 0 100px 100px white;' type='button'>
+                        <i class='material-icons f5 fl'>keyboard_arrow_down</i>
+                        <i class='material-icons f5 fr'>keyboard_arrow_down</i>
+                        展開計畫內容
+                    </button>
+                </div>
+            </div>
+            <div class='w-30-l ph3-l ph0 flex-ns flex-wrap flex-column-l w-100'>
+                <div class='w-100-l w-50-ns ph3 ph0-l flex-none self-start'>
+                    <a class="pa3 ba bw1 b--inherit round-s light-gray mb4 db border-rainbow "
+                        href="/projects/princube/orders/back_project?selected_reward=29332#details"><img width="100%"
+                            class="mb2 round-s"
+                            src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/projects/5111/options/29332_banner.jpg?1581393527"
+                            alt="29332 banner" />
+                        <div class='black b f4'>
+                            NT$3,280
+                        </div>
+                        <div class='f7 mv2'>
+                            <span class='black ph2 bg-near-white dib'>
+                                <span class='b'>308</span>
+                                個支持者
+                            </span>
+                        </div>
+                        <div class='black f6 mv-child-0 maxh5 maxh-none-ns overflow-auto'>
+                            <p>【 PrinCube口袋式印刷機｜單入 】
+                                <br />嘖嘖專屬優惠方案 $3,280
+                                <br />未來市價 $5,999，現省 $2,719。</p>
+                            <p>內含：
+                                <br />▶ PrinCube 口袋印刷機本體 × 1
+                                <br />▶ 標準版墨水匣 × 1
+                                <br />------------------------------------------------
+                                <br />重要提醒
+                                <br />- 如欲一次預購多組，可以用每組 3280 元的價格加購。請在「贊助金額」處輸入金額 = 3280 X 欲購買組數。</p>
+                        </div>
+                        <div class='mt3 gray tc ph2 f7 ba'>預計於 2020 年五月實現</div>
+                    </a>
+                </div>
+                <div class='w-100-l w-50-ns ph3 ph0-l flex-none self-start'>
+                    <a class="pa3 ba bw1 b--inherit round-s light-gray mb4 db border-rainbow "
+                        href="/projects/princube/orders/back_project?selected_reward=29329#details"><img width="100%"
+                            class="mb2 round-s"
+                            src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/projects/5111/options/29329_banner.jpg?1581393079"
+                            alt="29329 banner" />
+                        <div class='black b f4'>
+                            NT$1,180
+                        </div>
+                        <div class='f7 mv2'>
+                            <span class='black ph2 bg-near-white dib'>
+                                <span class='b'>463</span>
+                                個支持者
+                            </span>
+                        </div>
+                        <div class='black f6 mv-child-0 maxh5 maxh-none-ns overflow-auto'>
+                            <p>【 持久版墨水匣｜單入 】
+                                <br />嘖嘖優惠價 $1180。</p>
+                            <p>內含：
+                                <br />▶ 持久版墨水匣 × 1
+                                <br />------------------------------------------------
+                                <br />重要提醒
+                                <br />- 此為加購選項，不單獨販售。
+                                <br />- 請於備註欄填入PrinCube機器贊助編號。
+                                <br />- 如欲一次預購多組，可以用每組 1180 元的價格加購。請在「贊助金額」處輸入金額 = 1180 X 欲購買組數。</p>
+                        </div>
+                        <div class='mt3 gray tc ph2 f7 ba'>預計於 2020 年五月實現</div>
+                    </a>
+                </div>
+                <div class='w-100-l w-50-ns ph3 ph0-l flex-none self-start'>
+                    <a class="pa3 ba bw1 b--inherit round-s light-gray mb4 db border-rainbow "
+                        href="/projects/princube/orders/back_project?selected_reward=29330#details"><img width="100%"
+                            class="mb2 round-s"
+                            src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/projects/5111/options/29330_banner.jpg?1581393311"
+                            alt="29330 banner" />
+                        <div class='black b f4'>
+                            NT$880
+                        </div>
+                        <div class='f7 mv2'>
+                            <span class='black ph2 bg-near-white dib'>
+                                <span class='b'>23</span>
+                                個支持者
+                            </span>
+                        </div>
+                        <div class='black f6 mv-child-0 maxh5 maxh-none-ns overflow-auto'>
+                            <p>【 標準版墨水匣｜單入 】
+                                <br />嘖嘖優惠價 $880。</p>
+                            <p>內含：
+                                <br />▶ 標準版墨水匣 × 1
+                                <br />------------------------------------------------
+                                <br />重要提醒
+                                <br />- 此為加購選項，不單獨販售。
+                                <br />- 請於備註欄填入PrinCube機器贊助編號。
+                                <br />- 如欲一次預購多組，可以用每組 880 元的價格加購。請在「贊助金額」處輸入金額 = 880 X 欲購買組數。</p>
+                        </div>
+                        <div class='mt3 gray tc ph2 f7 ba'>預計於 2020 年五月實現</div>
+                    </a>
+                </div>
+                <div class='w-100-l w-50-ns ph3 ph0-l flex-none self-start'>
+                    <a class="pa3 ba bw1 b--inherit round-s light-gray mb4 db border-rainbow "
+                        href="/projects/princube/orders/back_project?selected_reward=29333#details"><img width="100%"
+                            class="mb2 round-s"
+                            src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/projects/5111/options/29333_banner.jpg?1581393977"
+                            alt="29333 banner" />
+                        <div class='black b f4'>
+                            NT$6,360
+                        </div>
+                        <div class='f7 mv2'>
+                            <span class='black ph2 bg-near-white dib'>
+                                <span class='b'>34</span>
+                                個支持者
+                            </span>
+                        </div>
+                        <div class='black f6 mv-child-0 maxh5 maxh-none-ns overflow-auto'>
+                            <p>【 PrinCube口袋式印刷機｜2入 】 嘖嘖專屬雙人團購優惠方案 $6,360 未來市價 $11,998，現省 $5,638。
+                                <br />內含： ▶ PrinCube 口袋印刷機本體 × 2 ▶ 標準版墨水匣 × 2 
+                                <br />------------------------------------------------ 
+                                <br />重要提醒
+                                <br />- 如欲一次預購多組，可以用每組 6360 元的價格加購。請在「贊助金額」處輸入金額 = 6360 X 欲購買組數。</p>
+                        </div>
+                        <div class='mt3 gray tc ph2 f7 ba'>預計於 2020 年五月實現</div>
+                    </a>
+                </div>
+                <div class='w-100-l w-50-ns ph3 ph0-l flex-none self-start'>
+                    <a class="pa3 ba bw1 b--inherit round-s light-gray mb4 db border-rainbow "
+                        href="/projects/princube/orders/back_project?selected_reward=29334#details"><img width="100%"
+                            class="mb2 round-s"
+                            src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/projects/5111/options/29334_banner.jpg?1581394368"
+                            alt="29334 banner" />
+                        <div class='black b f4'>
+                            NT$17,880
+                        </div>
+                        <div class='f7 mv2'>
+                            <span class='black ph2 bg-near-white dib'>
+                                <span class='b'>3</span>
+                                個支持者
+                            </span>
+                        </div>
+                        <div class='black f6 mv-child-0 maxh5 maxh-none-ns overflow-auto'>
+                            <p>【 PrinCube口袋式印刷機｜6入 】
+                                <br />嘖嘖專屬雙人團購優惠方案 $17,880
+                                <br />未來市價 $35,994，現省 $18,114。</p>
+                            <p>內含：
+                                <br />▶ PrinCube 口袋印刷機本體 × 6
+                                <br />▶ 標準版墨水匣 × 6</p>
+                        </div>
+                        <div class='mt3 gray tc ph2 f7 ba'>預計於 2020 年五月實現</div>
+                    </a>
+                </div>
+                <div class='w-100-l w-50-ns ph3 ph0-l flex-none self-start'>
+                    <a class="pa3 ba bw1 b--inherit round-s light-gray mb4 db border-rainbow "
+                        href="/projects/princube/orders/back_project?selected_reward=29337#details"><img width="100%"
+                            class="mb2 round-s"
+                            src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/projects/5111/options/29337_banner.jpg?1581394841"
+                            alt="29337 banner" />
+                        <div class='black b f4'>
+                            NT$27,800
+                        </div>
+                        <div class='f7 mv2'>
+                            <span class='black ph2 bg-near-white dib'>
+                                <span class='b'>2</span>
+                                個支持者
+                            </span>
+                        </div>
+                        <div class='black f6 mv-child-0 maxh5 maxh-none-ns overflow-auto'>
+                            <p>【 PrinCube口袋式印刷機｜10入 】
+                                <br />嘖嘖專屬10人團購優惠方案 $27,800
+                                <br />未來市價 $59,990，現省 32,190。</p>
+                            <p>內含：
+                                <br />▶ PrinCube 口袋印刷機本體 × 10
+                                <br />▶ 標準版墨水匣 × 10
+                                <br />▶ 團主專屬謝禮：標準版墨水匣 × 1</p>
+                        </div>
+                        <div class='mt3 gray tc ph2 f7 ba'>預計於 2020 年五月實現</div>
+                    </a>
+                </div>
+                <div class='w-100-l w-50-ns ph3 ph0-l flex-none self-start'>
+                    <a class="pa3 ba bw1 b--inherit round-s light-gray mb4 db border-rainbow "
+                        href="/projects/princube/orders/back_project?selected_reward=29338#details"><img width="100%"
+                            class="mb2 round-s"
+                            src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/projects/5111/options/29338_banner.jpg?1581394990"
+                            alt="29338 banner" />
+                        <div class='black b f4'>
+                            NT$53,600
+                        </div>
+                        <div class='f7 mv2'>
+                        </div>
+                        <div class='black f6 mv-child-0 maxh5 maxh-none-ns overflow-auto'>
+                            <p>【 PrinCube口袋式印刷機｜20入 】
+                                <br />嘖嘖專屬20人團購優惠方案 $53,600
+                                <br />未來市價 $119,980，現省 66,380。</p>
+                            <p>內含：
+                                <br />▶ PrinCube 口袋印刷機本體 × 20
+                                <br />▶ 標準版墨水匣 × 20
+                                <br />▶ 團主專屬謝禮：持久版墨水匣 × 1</p>
+                        </div>
+                        <div class='mt3 gray tc ph2 f7 ba'>預計於 2020 年五月實現</div>
+                    </a>
+                </div>
+                <div class='w-100-l w-50-ns ph3 ph0-l flex-none self-start'>
+                    <a class="pa3 ba bw1 b--inherit round-s light-gray mb4 db border-rainbow "
+                        href="/projects/princube/orders/back_project?selected_reward=29341#details"><img width="100%"
+                            class="mb2 round-s"
+                            src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/projects/5111/options/29341_banner.jpg?1581395105"
+                            alt="29341 banner" />
+                        <div class='black b f4'>
+                            NT$80,400
+                        </div>
+                        <div class='f7 mv2'>
+                            <span class='black ph2 bg-near-white dib'>
+                                <span class='b'>2</span>
+                                個支持者
+                            </span>
+                        </div>
+                        <div class='black f6 mv-child-0 maxh5 maxh-none-ns overflow-auto'>
+                            <p>【 PrinCube口袋式印刷機｜30入 】
+                                <br />嘖嘖專屬30人團購優惠方案 $80,400
+                                <br />未來市價 $179,970，現省 99,570。</p>
+                            <p>內含：
+                                <br />▶ PrinCube 口袋印刷機本體 × 30
+                                <br />▶ 標準版墨水匣 × 30
+                                <br />▶ 團主專屬謝禮：持久版墨水匣 × 1 + PrinCube機器一台</p>
+                        </div>
+                        <div class='mt3 gray tc ph2 f7 ba'>預計於 2020 年五月實現</div>
+                    </a>
+                </div>
+                <div class='w-100-l w-50-ns ph3 ph0-l flex-none self-start'>
+                    <div class="pa3 ba bw1 b--inherit round-s light-gray mb4 db  o-60"><img width="100%"
+                            class="mb2 round-s"
+                            src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/projects/5111/options/29328_banner.jpg?1581394538"
+                            alt="29328 banner" />
+                        <div class='black b f4'>
+                            NT$3,180
+                        </div>
+                        <div class='f7 mv2'><span class='f7 white ph2 bg-red b dib'>
+                                SOLD OUT
+                            </span><span class='black ph2 bg-near-white dib'>
+                                <span class='b'>302</span>
+                                個支持者
+                            </span>
+                        </div>
+                        <div class='black f6 mv-child-0 maxh5 maxh-none-ns overflow-auto'>
+                            <p>【 PrinCube口袋式印刷機｜單入 】
+                                <br />嘖嘖限量早鳥優惠方案 $3,180
+                                <br />未來市價 $5,999，現省 $2,819。</p>
+                            <p>內含：
+                                <br />▶ PrinCube 口袋印刷機本體 × 1
+                                <br />▶ 標準版墨水匣 × 1
+                                <br />------------------------------------------------
+                                <br />重要提醒
+                                <br />- 如欲一次預購多組，可以用每組 3180 元的價格加購。請在「贊助金額」處輸入金額 = 3180 X 欲購買組數。</p>
+                        </div>
+                        <div class='mt3 gray tc ph2 f7 ba'>預計於 2020 年五月實現</div>
+                    </div>
+                </div>
+                <div class='w-100-l w-50-ns ph3 ph0-l flex-none self-start'>
+                    <div class="pa3 ba bw1 b--inherit round-s light-gray mb4 db  o-60"><img width="100%"
+                            class="mb2 round-s"
+                            src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/projects/5111/options/27655_banner.jpg?1577719388"
+                            alt="27655 banner" />
+                        <div class='black b f4'>
+                            NT$3,180
+                        </div>
+                        <div class='f7 mv2'><span class='f7 white ph2 bg-red b dib'>
+                                SOLD OUT
+                            </span><span class='black ph2 bg-near-white dib'>
+                                <span class='b'>800</span>
+                                個支持者
+                            </span>
+                        </div>
+                        <div class='black f6 mv-child-0 maxh5 maxh-none-ns overflow-auto'>
+                            <p>【 PrinCube口袋式印刷機｜單入 】
+                                <br />嘖嘖限量晚鳥優惠方案 $3,180
+                                <br />未來市價 $5,999，現省 $2,819。</p>
+                            <p>內含：
+                                <br />▶ PrinCube 口袋印刷機本體 × 1
+                                <br />▶ 標準版墨水匣 × 1
+                                <br />------------------------------------------------
+                                <br />重要提醒
+                                <br />- 如欲一次預購多組，可以用每組 3180 元的價格加購。請在「贊助金額」處輸入金額 = 3180 X 欲購買組數。</p>
+                        </div>
+                        <div class='mt3 gray tc ph2 f7 ba'>預計於 2020 年四月實現</div>
+                    </div>
+                </div>
+                <div class='w-100-l w-50-ns ph3 ph0-l flex-none self-start'>
+                    <div class="pa3 ba bw1 b--inherit round-s light-gray mb4 db  o-60"><img width="100%"
+                            class="mb2 round-s"
+                            src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/projects/5111/options/28211_banner.jpg?1578485571"
+                            alt="28211 banner" />
+                        <div class='black b f4'>
+                            NT$880
+                        </div>
+                        <div class='f7 mv2'><span class='f7 white ph2 bg-red b dib'>
+                                SOLD OUT
+                            </span><span class='black ph2 bg-near-white dib'>
+                                <span class='b'>39</span>
+                                個支持者
+                            </span>
+                        </div>
+                        <div class='black f6 mv-child-0 maxh5 maxh-none-ns overflow-auto'>
+                            <p>【 標準版墨水匣｜單入 】
+                                <br />嘖嘖優惠價 $880。</p>
+                            <p>內含：
+                                <br />▶ 標準版墨水匣 × 1
+                                <br />------------------------------------------------
+                                <br />重要提醒
+                                <br />- 此為加購選項，不單獨販售。
+                                <br />- 請於備註欄填入PrinCube機器贊助編號。
+                                <br />- 如欲一次預購多組，可以用每組 880 元的價格加購。請在「贊助金額」處輸入金額 = 880 X 欲購買組數。</p>
+                        </div>
+                        <div class='mt3 gray tc ph2 f7 ba'>預計於 2020 年四月實現</div>
+                    </div>
+                </div>
+                <div class='w-100-l w-50-ns ph3 ph0-l flex-none self-start'>
+                    <div class="pa3 ba bw1 b--inherit round-s light-gray mb4 db  o-60"><img width="100%"
+                            class="mb2 round-s"
+                            src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/projects/5111/options/28212_banner.jpg?1578485699"
+                            alt="28212 banner" />
+                        <div class='black b f4'>
+                            NT$1,180
+                        </div>
+                        <div class='f7 mv2'><span class='f7 white ph2 bg-red b dib'>
+                                SOLD OUT
+                            </span><span class='black ph2 bg-near-white dib'>
+                                <span class='b'>377</span>
+                                個支持者
+                            </span>
+                        </div>
+                        <div class='black f6 mv-child-0 maxh5 maxh-none-ns overflow-auto'>
+                            <p>【 持久版墨水匣｜單入 】
+                                <br />嘖嘖優惠價 $1180。</p>
+                            <p>內含：
+                                <br />▶ 持久版墨水匣 × 1
+                                <br />------------------------------------------------
+                                <br />重要提醒
+                                <br />- 此為加購選項，不單獨販售。
+                                <br />- 請於備註欄填入PrinCube機器贊助編號。
+                                <br />- 如欲一次預購多組，可以用每組 1180 元的價格加購。請在「贊助金額」處輸入金額 = 1180 X 欲購買組數。</p>
+                        </div>
+                        <div class='mt3 gray tc ph2 f7 ba'>預計於 2020 年四月實現</div>
+                    </div>
+                </div>
+                <div class='w-100-l w-50-ns ph3 ph0-l flex-none self-start'>
+                    <div class="pa3 ba bw1 b--inherit round-s light-gray mb4 db  o-60"><img width="100%"
+                            class="mb2 round-s"
+                            src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/projects/5111/options/27639_banner.jpg?1577170266"
+                            alt="27639 banner" />
+                        <div class='black b f4'>
+                            NT$3,280
+                        </div>
+                        <div class='f7 mv2'><span class='f7 white ph2 bg-red b dib'>
+                                SOLD OUT
+                            </span><span class='black ph2 bg-near-white dib'>
+                                <span class='b'>81</span>
+                                個支持者
+                            </span>
+                        </div>
+                        <div class='black f6 mv-child-0 maxh5 maxh-none-ns overflow-auto'>
+                            <p>【 PrinCube口袋式印刷機｜單入 】
+                                <br />嘖嘖專屬優惠方案 $3,280
+                                <br />未來市價 $5,999，現省 $2,719。</p>
+                            <p>內含：
+                                <br />▶ PrinCube 口袋印刷機本體 × 1
+                                <br />▶ 標準版墨水匣 × 1
+                                <br />------------------------------------------------
+                                <br />重要提醒
+                                <br />- 台灣 (本島) 免運費。
+                                <br />- 台灣 (外島) 及海外地區運費：$200。</p>
+                        </div>
+                        <div class='mt3 gray tc ph2 f7 ba'>預計於 2020 年四月實現</div>
+                    </div>
+                </div>
+                <div class='w-100-l w-50-ns ph3 ph0-l flex-none self-start'>
+                    <div class="pa3 ba bw1 b--inherit round-s light-gray mb4 db  o-60"><img width="100%"
+                            class="mb2 round-s"
+                            src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/projects/5111/options/27349_banner.jpg?1577169958"
+                            alt="27349 banner" />
+                        <div class='black b f4'>
+                            NT$6,360
+                        </div>
+                        <div class='f7 mv2'><span class='f7 white ph2 bg-red b dib'>
+                                SOLD OUT
+                            </span><span class='black ph2 bg-near-white dib'>
+                                <span class='b'>48</span>
+                                個支持者
+                            </span>
+                        </div>
+                        <div class='black f6 mv-child-0 maxh5 maxh-none-ns overflow-auto'>
+                            <p>【 PrinCube口袋式印刷機｜2入 】
+                                <br />嘖嘖專屬雙人團購優惠方案 $6,360
+                                <br />未來市價 $11,998，現省 $5,638。</p>
+                            <p>內含：
+                                <br />▶ PrinCube 口袋印刷機本體 × 2
+                                <br />▶ 標準版墨水匣 × 2
+                                <br />------------------------------------------------
+                                <br />重要提醒
+                                <br />- 台灣 (本島) 免運費。
+                                <br />- 台灣 (外島) 及海外地區運費：$200。
+                            </p>
+                        </div>
+                        <div class='mt3 gray tc ph2 f7 ba'>預計於 2020 年四月實現</div>
+                    </div>
+                </div>
+                <div class='w-100-l w-50-ns ph3 ph0-l flex-none self-start'>
+                    <div class="pa3 ba bw1 b--inherit round-s light-gray mb4 db  o-60"><img width="100%"
+                            class="mb2 round-s"
+                            src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/projects/5111/options/27944_banner.jpg?1577772487"
+                            alt="27944 banner" />
+                        <div class='black b f4'>
+                            NT$27,800
+                        </div>
+                        <div class='f7 mv2'><span class='f7 white ph2 bg-red b dib'>
+                                SOLD OUT
+                            </span><span class='black ph2 bg-near-white dib'>
+                                <span class='b'>3</span>
+                                個支持者
+                            </span>
+                        </div>
+                        <div class='black f6 mv-child-0 maxh5 maxh-none-ns overflow-auto'>
+                            <p>【 PrinCube口袋式印刷機｜10入 】
+                                <br />嘖嘖專屬10人團購優惠方案 $27,800
+                                <br />未來市價 $59,990，現省 32,190。</p>
+                            <p>內含：
+                                <br />▶ PrinCube 口袋印刷機本體 × 10
+                                <br />▶ 標準版墨水匣 × 10
+                                <br />▶ 團主專屬謝禮：標準版墨水匣 × 1</p>
+                        </div>
+                        <div class='mt3 gray tc ph2 f7 ba'>預計於 2020 年四月實現</div>
+                    </div>
+                </div>
+                <div class='w-100-l w-50-ns ph3 ph0-l flex-none self-start'>
+                    <div class="pa3 ba bw1 b--inherit round-s light-gray mb4 db  o-60"><img width="100%"
+                            class="mb2 round-s"
+                            src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/projects/5111/options/27642_banner.jpg?1577772679"
+                            alt="27642 banner" />
+                        <div class='black b f4'>
+                            NT$53,600
+                        </div>
+                        <div class='f7 mv2'><span class='f7 white ph2 bg-red b dib'>
+                                SOLD OUT
+                            </span><span class='black ph2 bg-near-white dib'>
+                                <span class='b'>8</span>
+                                個支持者
+                            </span>
+                        </div>
+                        <div class='black f6 mv-child-0 maxh5 maxh-none-ns overflow-auto'>
+                            <p>【 PrinCube口袋式印刷機｜20入 】
+                                <br />嘖嘖專屬20人團購優惠方案 $53,600
+                                <br />未來市價 $119,980，現省 66,380。</p>
+                            <p>內含：
+                                <br />▶ PrinCube 口袋印刷機本體 × 20
+                                <br />▶ 標準版墨水匣 × 20
+                                <br />▶ 團主專屬謝禮：持久版墨水匣 × 1</p>
+                        </div>
+                        <div class='mt3 gray tc ph2 f7 ba'>預計於 2020 年四月實現</div>
+                    </div>
+                </div>
+                <div class='w-100-l w-50-ns ph3 ph0-l flex-none self-start'>
+                    <div class="pa3 ba bw1 b--inherit round-s light-gray mb4 db  o-60"><img width="100%"
+                            class="mb2 round-s"
+                            src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/projects/5111/options/27947_banner.jpg?1577773136"
+                            alt="27947 banner" />
+                        <div class='black b f4'>
+                            NT$80,400
+                        </div>
+                        <div class='f7 mv2'><span class='f7 white ph2 bg-red b dib'>
+                                SOLD OUT
+                            </span><span class='black ph2 bg-near-white dib'>
+                                <span class='b'>14</span>
+                                個支持者
+                            </span>
+                        </div>
+                        <div class='black f6 mv-child-0 maxh5 maxh-none-ns overflow-auto'>
+                            <p>【 PrinCube口袋式印刷機｜30入 】
+                                <br />嘖嘖專屬30人團購優惠方案 $80,400
+                                <br />未來市價 $179,970，現省 99,570。</p>
+                            <p>內含：
+                                <br />▶ PrinCube 口袋印刷機本體 × 30
+                                <br />▶ 標準版墨水匣 × 30
+                                <br />▶ 團主專屬謝禮：持久版墨水匣 × 1 + PrinCube機器一台</p>
+                        </div>
+                        <div class='mt3 gray tc ph2 f7 ba'>預計於 2020 年四月實現</div>
+                    </div>
+                </div>
+                <div class='w-100-l w-50-ns ph3 ph0-l flex-none self-start'>
+                    <div class="pa3 ba bw1 b--inherit round-s light-gray mb4 db  o-60"><img width="100%"
+                            class="mb2 round-s"
+                            src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/projects/5111/options/27402_banner.jpeg?1577765418"
+                            alt="27402 banner" />
+                        <div class='black b f4'>
+                            NT$2,980
+                        </div>
+                        <div class='f7 mv2'><span class='f7 white ph2 bg-red b dib'>
+                                SOLD OUT
+                            </span><span class='black ph2 bg-near-white dib'>
+                                <span class='b'>6059</span>
+                                個支持者
+                            </span>
+                        </div>
+                        <div class='black f6 mv-child-0 maxh5 maxh-none-ns overflow-auto'>
+                            <p>【 PrinCube口袋式印刷機｜單入 】
+                                <br />超早鳥優惠方案 ( 72 小時 ) $2,980
+                                <br />未來市價 $5,999，現省 $3,019。</p>
+                            <p>內含：
+                                <br />▶ PrinCube 口袋印刷機本體 × 1
+                                <br />▶ 標準版墨水匣 × 1
+                                <br />------------------------------------------------
+                                <br />重要提醒
+                                <br />- 台灣 (本島) 免運費。
+                                <br />- 台灣 (外島) 及海外地區運費：$200。
+                                <br />- 如欲一次預購多組，可以用每組 2980 元的價格加購。請在「贊助金額」處輸入金額 = 2980 X 欲購買組數。</p>
+                        </div>
+                        <div class='mt3 gray tc ph2 f7 ba'>預計於 2020 年四月實現</div>
+                    </div>
+                </div>
+                <div class='w-100-l w-50-ns ph3 ph0-l flex-none self-start'>
+                    <div class="pa3 ba bw1 b--inherit round-s light-gray mb4 db  o-60"><img width="100%"
+                            class="mb2 round-s"
+                            src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/projects/5111/options/27405_banner.jpg?1577169699"
+                            alt="27405 banner" />
+                        <div class='black b f4'>
+                            NT$880
+                        </div>
+                        <div class='f7 mv2'><span class='f7 white ph2 bg-red b dib'>
+                                SOLD OUT
+                            </span><span class='black ph2 bg-near-white dib'>
+                                <span class='b'>74</span>
+                                個支持者
+                            </span>
+                        </div>
+                        <div class='black f6 mv-child-0 maxh5 maxh-none-ns overflow-auto'>
+                            <p>【 標準版墨水匣｜單入 】
+                                <br />嘖嘖優惠價 $880。</p>
+                            <p>內含：
+                                <br />▶ 標準版墨水匣 × 1
+                                <br />------------------------------------------------
+                                <br />重要提醒
+                                <br />- 台灣 (本島) 免運費。
+                                <br />- 此為加購選項，不單獨販售。
+                                <br />- 請於備註欄填入PrinCube機器贊助編號。
+                                <br />- 如欲一次預購多組，可以用每組 880 元的價格加購。請在「贊助金額」處輸入金額 = 880 X 欲購買組數。</p>
+                        </div>
+                        <div class='mt3 gray tc ph2 f7 ba'>預計於 2020 年四月實現</div>
+                    </div>
+                </div>
+                <div class='w-100-l w-50-ns ph3 ph0-l flex-none self-start'>
+                    <div class="pa3 ba bw1 b--inherit round-s light-gray mb4 db  o-60"><img width="100%"
+                            class="mb2 round-s"
+                            src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/projects/5111/options/27081_banner.jpg?1576649157"
+                            alt="27081 banner" />
+                        <div class='black b f4'>
+                            NT$1,180
+                        </div>
+                        <div class='f7 mv2'><span class='f7 white ph2 bg-red b dib'>
+                                SOLD OUT
+                            </span><span class='black ph2 bg-near-white dib'>
+                                <span class='b'>1948</span>
+                                個支持者
+                            </span>
+                        </div>
+                        <div class='black f6 mv-child-0 maxh5 maxh-none-ns overflow-auto'>
+                            <p>【 持久版墨水匣｜單入 】
+                                <br />嘖嘖優惠價 $1180。</p>
+                            <p>內含：
+                                <br />▶ 持久版墨水匣 × 1
+                                <br />------------------------------------------------
+                                <br />重要提醒
+                                <br />- 台灣 (本島) 免運費。
+                                <br />- 此為加購選項，不單獨販售。
+                                <br />- 請於備註欄填入PrinCube機器贊助編號。
+                                <br />- 如欲一次預購多組，可以用每組 1180 元的價格加購。請在「贊助金額」處輸入金額 = 1180 X 欲購買組數。</p>
+                        </div>
+                        <div class='mt3 gray tc ph2 f7 ba'>預計於 2020 年四月實現</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class='pt5 pb6 f6 bt light-gray relative'>
+        <div class='container dark-gray'>
+            <div class='flex ph0-l ph3'>
+                <div class='w-third-l w-100 mt-child-0 mb0-l mb4'>
+                    <h3>社群</h3>
+                    <a class='db' href='https://facebook.com/zeczec.com'>Facebook</a>
+                    <a class='db' href='https://instagram.com/zeczec_com'>Instagram</a>
+                    <a class='db' href='https://twitter.com/zeczec_com'>Twitter</a>
+                </div>
+                <div class='w-third-l w-100 mt-child-0 mb0-l mb4'>
+                    <h3>幫助</h3>
+                    <a class='db' href='/faq'>常見問答</a>
+                    <a class='db' href='/docs/terms_of_service'>使用條款</a>
+                    <a class='db' href='/docs/privacy'>隱私權政策</a>
+                </div>
+                <div class='w-third-l w-100 mt-child-0 mb0-l mb4 relative'>
+                    <h3>
+                        關於
+                    </h3>
+                    <a class='db' href='/about'>關於我們</a>
+                    <a class='db' href='/brand'>商標資源</a>
+                    <div class='f7 mt3'>&copy; 嘖室股份有限公司</div>
+                    <a class='absolute-l top-0 right-0 mt3 dib relative' href='/'><svg class='logo mr2 middle'
+                            style='height: 28px; width: 28px; ' viewBox='0 0 138 138'
+                            xmlns='http://www.w3.org/2000/svg'>
+                            <title>zeczec</title>
+                            <path
+                                d='M69 0a69 69 0 1 0 69 69A69 69 0 0 0 69 0zm38.7 75.53l-1.55 7.18c-.23 1.18-.81 1.54-1.82 1.49l-40.48-1.9a1.72 1.72 0 0 1-1.43-2.2l2.3-11.94a2.05 2.05 0 0 0-1.87-2.23l-31-2.09c-1 0-1.57-.66-1.57-1.82l1.16-6.81c.22-1.15.8-1.43 1.84-1.37l41.94 2.32a1.94 1.94 0 0 1 1.72 2.13l-2.19 12.13a1.88 1.88 0 0 0 1.87 2.1l30.06 1.39c.93 0 1.24.53 1.03 1.62z'>
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class='pa3 z-5 bt b--moon-gray w-100 relative bg-near-white fixed bottom-0 js-cookie-banner' hidden>
+        <div class='container pv4-ns'>
+            <div class='flex-ns flex-nowrap items-center'>
+                <div class='f6 mr3-ns'>
+                    <p class='mt0'>
+                        嘖嘖網站以及嘖嘖網站使用的第三方服務利用必要的瀏覽器 cookies 技術達成部分網站必須功能。若有興趣了解更多相關資訊或反悔同意的條款，請詳閱我們的<a
+                            class='underline dark-gray' data-track='GDPR#ClickPrivacy' href='/docs/privacy'>隱私權政策</a>及
+                        <a class='underline dark-gray' data-track='GDPR#ClickCookies' href='/cookies'>cookies 需求</a>
+                        。
+                    </p>
+                    <p class='mb0-ns'>點下此通知窗以外的任何連結或按鈕、捲動這個頁面、或以任何方式繼續使用嘖嘖網站，代表你同意了我們的隱私權政策及 cookies 存取。</p>
+                </div>
+                <button class='button f6 bg-dark-green white js-accept-cookies bn' data-track='GDPR#ClickAccept'
+                    type='button'>接受 & 關閉</button>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/zeczec-7f279c7b83f5bd858aa14977d49e68986dd74f5271d9be800306f0d8396ef8df.js"></script>
+    <script>
+        ga('create', 'UA-149762699-2', 'auto', 'clientTracker')
+        ga('clientTracker.set', 'anonymizeIp', true)
+        ga('clientTracker.send', 'pageview')
+    </script>
+    <div id='fb-root'></div>
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            }; if (!f._fbq) f._fbq = n;
+            n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+        }(window,
+            document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+    </script>
+    <noscript><img height='1' width='1' alt='' class='pixel' style='visibility:hidden'
+            src='https://www.facebook.com/tr?id=418924355657143&amp;ev=PageView&amp;noscript=1&amp;cd[value]=0&amp;cd[currency]=TWD' /></noscript>
+    <script>
+        fbq('init', '418924355657143')
+    </script>
+    <script>
+        fbq('init', '465239610292033');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height='1' width='1' alt='' class='pixel' style='visibility:hidden'
+            src='https://www.facebook.com/tr?id=465239610292033&amp;ev=PageView&amp;noscript=1&amp;cd[value]=0&amp;cd[currency]=TWD' /></noscript>
+</body>
+
+</html>
