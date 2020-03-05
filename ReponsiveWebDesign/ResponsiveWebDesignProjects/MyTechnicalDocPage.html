@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        html,
+        body {
+            min-width: 290px;
+            color: #4d4e53;
+            background-color: #ffffff;
+            font-family: "Open Sans", Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        #navbar {
+            position: fixed;
+            min-width: 290px;
+            top: 0px;
+            left: 0px;
+            width: 300px;
+            height: 100%;
+            border-right: solid;
+            border-color: rgba(0, 22, 22, 0.4);
+        }
+
+        header {
+            color: black;
+            margin: 10px;
+            text-align: center;
+            font-size: 1.8em;
+            font-weight: thin;
+        }
+
+        #main-doc header {
+            text-align: left;
+            margin: 0px;
+        }
+
+        #navbar ul {
+            height: 88%;
+            padding: 0;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        #navbar li {
+            color: #4d4e53;
+            border-top: 1px solid;
+            list-style: none;
+            position: relative;
+            width: 100%;
+        }
+
+        #navbar a {
+            display: block;
+            padding: 10px 30px;
+            color: #4d4e53;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #main-doc {
+            position: absolute;
+            margin-left: 310px;
+            padding: 20px;
+            margin-bottom: 110px;
+        }
+
+        section article {
+            color: #4d4e53;
+            margin: 15px;
+            font-size: 0.96em;
+        }
+
+        section li {
+            margin: 15px 0px 0px 20px;
+        }
+
+        code {
+            display: block;
+            text-align: left;
+            white-space: pre;
+            position: relative;
+            word-break: normal;
+            word-wrap: normal;
+            line-height: 2;
+            background-color: #f7f7f7;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        @media only screen and (max-width: 815px) {
+
+            /* For mobile phones: */
+            #navbar ul {
+                border: 1px solid;
+                height: 207px;
+            }
+
+            #navbar {
+                background-color: white;
+                position: absolute;
+                top: 0;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                max-height: 275px;
+                border: none;
+                z-index: 1;
+                border-bottom: 2px solid;
+            }
+
+            #main-doc {
+                position: relative;
+                margin-left: 0px;
+                margin-top: 270px;
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            #main-doc {
+                margin-left: -10px;
+            }
+
+            code {
+                margin-left: -20px;
+                width: 100%;
+                padding: 15px;
+                padding-left: 10px;
+                padding-right: 45px;
+                min-width: 233px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>Javascrpit Objects</header>
+        <ul>
+            <li><a class="nav-link" href="#Properties">Propertoes</a></li>
+            <li><a class="nav-link" href="#Methods">Methods</a></li>
+            <li><a class="nav-link" href="#User-Defined_Objects">User-Defined Objects</a></li>
+            <li><a class="nav-link" href="#Defining_Methods_for_an_Object">Defining Methods for an Object</a></li>
+            <li><a class="nav-link" href="#The_with_Keyword">The 'with' Keyword</a></li>
+            <li><a class="nav-link" href="#Native_Objects">Native Objects</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section id="Properties" class="main-section">
+            <header>Properties</header>
+            <article>
+                <p>
+                    Object properties can be any of the three primitive data types, or any of the abstract data types,
+                    such as another object. Object properties are usually variables that are used internally in the
+                    object's methods, but can also be globally visible variables that are used throughout the page.
+                </p>
+                <p>The syntax for adding a property to an object is −</p>
+                <code>objectName.objectProperty = propertyValue;</code>
+
+                <p><strong>For example −</strong> The following code gets the document title using the
+                    <strong>"title"</strong> property of the <strong>document</strong>
+                    object.</p>
+                <code>var str = document.title;</code>
+            </article>
+        </section>
+        <section id="Methods" class="main-section">
+            <header>Methods</header>
+            <article>
+                <p>Methods are the functions that let the object do something or let something be done to it. There is a
+                    small difference between a function and a method – at a function is a standalone unit of statements
+                    and
+                    a method is attached to an object and can be referenced by the <strong>this</strong> keyword.</p>
+                <p>Methods are useful for everything from displaying the contents of the object to the screen to
+                    performing
+                    complex mathematical operations on a group of local properties and parameters.</p>
+                <p><strong>For example − </strong> Following is a simple example to show how to use the
+                    <strong>write()</strong> method
+                    of document object
+                    to
+                    write any content on the document.</p>
+                <code>document.write("This is test");</code>
+            </article>
+        </section>
+        <section id="User-Defined_Objects" class="main-section">
+            <header>User-Defined Objects</header>
+            <article>
+                <p>All user-defined objects and built-in objects are descendants of an object called <b>Object</b>.</p>
+                <h3>The new Operator</h3>
+                <p>The <b>new</b> operator is used to create an instance of an object. To create an object, the
+                    <b>new</b> operator is followed by the constructor method.</p>
+                <p>In the following example, the constructor methods are Object(), Array(), and Date(). These
+                    constructors are built-in JavaScript functions.</p>
+                <code>var employee = new Object();
+var books = new Array("C++", "Perl", "Java");
+var day = new Date("August 15, 1947");
+</code>
+                <h3>The Object() Constructor</h3>
+                <p>A constructor is a function that creates and initializes an object. JavaScript provides a special
+                    constructor function called <b>Object()</b> to build the object. The return value of the
+                    <b>Object()</b> constructor is assigned to a variable.</p>
+                <p>The variable contains a reference to the new object. The properties assigned to the object are not
+                    variables and are not defined with the <b>var</b> keyword.</p>
+                <h3>Example 1</h3>
+                <p>Try the following example; it demonstrates how to create an Object.</p>
+                <div class="demo-view">
+                    <a href="http://tpcg.io/BDKXJI" target="_blank" rel="nofollow" class="demo"><i
+                            class="fa-external-link"></i> Live Demo</a>
+                </div>
+                <code>
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;User-defined objects&lt;/title&gt;     
+    &lt;script type = "text/javascript"&gt;
+        var book = new Object();   // Create the object
+        book.subject = "Perl";     // Assign properties to the object
+        book.author  = "Mohtashim";
+    &lt;/script&gt;      
+&lt;/head&gt;
+
+&lt;body&gt;  
+    &lt;script type = "text/javascript"&gt;
+        document.write("Book name is : " + book.subject + "&lt;br&gt;");
+        document.write("Book author is : " + book.author + "&lt;br&gt;");
+    &lt;/script&gt;   
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+                <h3>Output</h3>
+                <code>
+Book name is : Perl 
+Book author is : Mohtashim
+</code>
+                <h3>Example 2</h3>
+                <p>This example demonstrates how to create an object with a User-Defined Function. Here <b>this</b>
+                    keyword is used to refer to the object that has been passed to a function.</p>
+                <div class="demo-view">
+                    <a href="http://tpcg.io/QvyusZ" target="_blank" rel="nofollow" class="demo"><i
+                            class="fa-external-link"></i> Live Demo</a>
+                </div>
+                <code>
+&lt;html&gt;
+&lt;head&gt;   
+&lt;title&gt;User-defined objects&lt;/title&gt;
+    &lt;script type = "text/javascript"&gt;
+        function book(title, author) {
+            this.title = title; 
+            this.author  = author;
+        }
+    &lt;/script&gt;      
+&lt;/head&gt;
+
+&lt;body&gt;   
+    &lt;script type = "text/javascript"&gt;
+        var myBook = new book("Perl", "Mohtashim");
+        document.write("Book title is : " + myBook.title + "&lt;br&gt;");
+        document.write("Book author is : " + myBook.author + "&lt;br&gt;");
+    &lt;/script&gt;      
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+                <h3>Output</h3>
+                <code>
+Book title is : Perl 
+Book author is : Mohtashim
+</code>
+            </article>
+        </section>
+        <section id="Defining_Methods_for_an_Object" class="main-section">
+            <header>Defining Methods for an Object</header>
+            <article>
+                <p>The previous examples demonstrate how the constructor creates the object and assigns properties. But
+                    we need to complete the definition of an object by assigning methods to it.</p>
+                <h3>Example</h3>
+                <p>Try the following example; it shows how to add a function along with an object.</p>
+                <div class="demo-view">
+                    <a href="http://tpcg.io/M8jPyN" target="_blank" rel="nofollow" class="demo"><i
+                            class="fa-external-link"></i> Live Demo</a>
+                </div>
+                <code>
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;User-defined objects&lt;/title&gt;
+&lt;script type = "text/javascript"&gt;
+    // Define a function which will work as a method
+    function addPrice(amount) {
+        this.price = amount; 
+    }
+    
+    function book(title, author) {
+        this.title = title;
+        this.author  = author;
+        this.addPrice = addPrice;  // Assign that method as property.
+    }
+&lt;/script&gt;      
+&lt;/head&gt;
+
+&lt;body&gt;   
+&lt;script type = "text/javascript"&gt;
+    var myBook = new book("Perl", "Mohtashim");
+    myBook.addPrice(100);
+    
+    document.write("Book title is : " + myBook.title + "&lt;br&gt;");
+    document.write("Book author is : " + myBook.author + "&lt;br&gt;");
+    document.write("Book price is : " + myBook.price + "&lt;br&gt;");
+&lt;/script&gt;      
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+                <h3>Output</h3>
+                <code>
+Book title is : Perl 
+Book author is : Mohtashim 
+Book price is : 100
+</code>
+            </article>
+
+        </section>
+        <section id="The_with_Keyword" class="main-section">
+            <header>The 'with' Keyword</header>
+            <article>
+                <p>The <b>‘with’</b> keyword is used as a kind of shorthand for referencing an object's properties or
+                    methods.</p>
+                <p>The object specified as an argument to <b>with</b> becomes the default object for the duration of the
+                    block that follows. The properties and methods for the object can be used without naming the object.
+                </p>
+                <h3>Syntax</h3>
+                <p>The syntax for with object is as follows &minus;</p>
+                <code>
+with (object) {
+properties used without the object name and dot
+}
+</code>
+                <h3>Example</h3>
+                <p>Try the following example.</p>
+                <div class="demo-view">
+                    <a href="http://tpcg.io/qz66Sc" target="_blank" rel="nofollow" class="demo"><i
+                            class="fa-external-link"></i> Live Demo</a>
+                </div>
+                <code>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;User-defined objects&lt;/title&gt;   
+    &lt;script type = "text/javascript"&gt;
+        // Define a function which will work as a method
+        function addPrice(amount) {
+            with(this) {
+            price = amount;
+            }
+        }
+        function book(title, author) {
+            this.title = title;
+            this.author = author;
+            this.price = 0;
+            this.addPrice = addPrice;  // Assign that method as property.
+        }
+    &lt;/script&gt;      
+&lt;/head&gt;
+
+&lt;body&gt;   
+    &lt;script type = "text/javascript"&gt;
+        var myBook = new book("Perl", "Mohtashim");
+        myBook.addPrice(100);
+        
+        document.write("Book title is : " + myBook.title + "&lt;br&gt;");
+        document.write("Book author is : " + myBook.author + "&lt;br&gt;");
+        document.write("Book price is : " + myBook.price + "&lt;br&gt;");
+    &lt;/script&gt;      
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+                <h3>Output</h3>
+                <code>
+Book title is : Perl 
+Book author is : Mohtashim 
+Book price is : 100
+</code>
+            </article>
+        </section>
+        </section>
+        <section id="Native_Objects" class="main-section">
+            <header>Native Objects</header>
+            <article>
+                <p>JavaScript has several built-in or native objects. These objects are accessible anywhere in your
+                    program and will work the same way in any browser running in any operating system.</p>
+                <p>Here is the list of all important JavaScript Native Objects &minus;</p>
+                <ul class="list">
+                    <li>
+                        <p><a href="/javascript/javascript_number_object.htm">JavaScript Number Object</a></p>
+                    </li>
+                    <li>
+                        <p><a href="/javascript/javascript_boolean_object.htm">JavaScript Boolean Object</a></p>
+                    </li>
+                    <li>
+                        <p><a href="/javascript/javascript_strings_object.htm">JavaScript String Object</a></p>
+                    </li>
+                    <li>
+                        <p><a href="/javascript/javascript_arrays_object.htm">JavaScript Array Object</a></p>
+                    </li>
+                    <li>
+                        <p><a href="/javascript/javascript_date_object.htm">JavaScript Date Object</a></p>
+                    </li>
+                    <li>
+                        <p><a href="/javascript/javascript_math_object.htm">JavaScript Math Object</a></p>
+                    </li>
+                    <li>
+                        <p><a href="/javascript/javascript_regexp_object.htm">JavaScript RegExp Object</a></p>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>
