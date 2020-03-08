@@ -1,0 +1,1766 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/DataCheck.js"></script>
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--讓ie在切換瀏覽器模式時 文件模式會使用最新的版本-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--RWD用-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--RWD用-->
+    <!--android 手機板主題顏色用 更改網址列顏色-->
+    <meta name="theme-color" content="#ee2a2a">
+    <!--android 手機板主題顏色用-->
+    <meta name="format-detection" content="telephone=no">
+    <!--取消行動版 safari 自動偵測數字成電話號碼-->
+
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <!--電腦版icon-->
+    <link rel="apple-touch-icon" href="../images/icon.png" />
+    <!--手機版icon  57x57px-->
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/icon-72.png" />
+    <!--手機版icon  72x72px-->
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/icon@2.png" />
+    <!--手機版icon  114x114px-->
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <!--將 版頭+版腳 樣式獨立出來 start-->
+    <link rel="stylesheet" type="text/css" href="../css/header_footer03.css" />
+    <!--將 版頭+版腳 樣式獨立出來 end-->
+    <!--google material icon-->
+    <link rel="stylesheet" href="../icon_fonts/material_icons/material-icons.css">
+    <script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="../js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+    <script src="../js/common.js" type="text/javascript"></script>
+    <!--JavaScript共用區-->
+    <!--漣漪效果 第一塊 start-->
+    <link href="../js/ripples/ripples.css" rel="stylesheet" type="text/css" />
+    <script src="../js/ripples/material.js" type="text/javascript"></script>
+    <script src="../js/ripples/ripples.min.js" type="text/javascript"></script>
+    <!--漣漪效果 第一塊 end-->
+    <!--輪播特效 第一塊 開始-->
+    <link rel="stylesheet" href="../js/swiper/idangerous.swiper.css" />
+    <!--輪播特效 第一塊 結束-->
+    <!--當卷軸到一定高度時，物件才會出現-->
+    <script type="text/javascript" src="../js/wow/wow.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/animate/animate.css" />
+    <script type="text/javascript" src="../js/wow/wow_example.js"></script>
+    <script src="../js/cycle2/jquery.cycle2.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../js/slick/slick-theme.css" />
+
+    <!-- SEO 讀取關鍵字設定值 (讀取首頁共用值) -->
+    <meta name="Robots" content="all" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="keywords" content="李靜唯,塔羅密碼,算命,印度占星,鐵版神算,紫微斗數,李静唯,塔罗密码,算命,印度占星,铁版神算,紫微斗数" />
+    <meta name="copyright" content="李靜唯,李静唯" />
+    <meta name="description" content="李靜唯三合一命理星占人生/印度占星/紫微斗數/鐵版神算/塔羅靈數/心靈療癒
+李静唯三合一星占人生" />
+    <!-- SEO -->
+
+    <!-- 追蹤碼 -->
+    <!-- 追蹤碼 -->
+
+    <title>李靜唯老師三合一命理星占人生/印度占星/紫微斗數/鐵版神算/塔羅靈數/心靈療癒/李静唯老师三合一星占人生</title>
+
+    <script language="javascript">
+        var strConstellation;
+
+        function ShowCard() {
+            var txtYear = document.getElementById('txtYear').value;
+            var txtMonth = document.getElementById('txtMonth').value;
+            var txtDay = document.getElementById('txtDay').value;
+
+            var Total;
+            var strTotal;
+            var People, CardInx, Soul, Love, Money;
+            var strResult, strCardName;
+            Total = Number(txtYear) + Number(txtMonth) + Number(txtDay);
+            strTotal = Total.toString();
+
+            People = 0;
+            for (iLp = 0; iLp < 4; iLp++) {
+                People += Number(strTotal.substring(iLp, iLp + 1));
+            }
+
+            // 人格牌
+            strResult = "";
+            if (People <= 22) {
+                strCardName = CardName(People);
+                strResult += "人格牌:" + strCardName;
+
+                strTotal = People.toString();
+                CardInx = 0;
+                for (iLp = 0; iLp < 2; iLp++) {
+                    CardInx += Number(strTotal.substring(iLp, iLp + 1));
+                }
+                if (CardInx == 10) CardInx = 1;
+
+                strCardName = CardName(CardInx);
+                strResult += "<br>靈魂牌:" + strCardName;
+
+                Soul = CardInx;
+            } else {
+                // 大餘 22 相併數
+                strTotal = People.toString();
+                CardInx = 0;
+                for (iLp = 0; iLp < 2; iLp++) {
+                    CardInx += Number(strTotal.substring(iLp, iLp + 1));
+                }
+                strCardName = CardName(CardInx);
+
+                strResult += "人格牌:" + strCardName;
+                strResult += "<br>靈魂牌:" + strCardName;
+
+                Soul = CardInx;
+            }
+
+            // 愛情牌
+            Love = Soul + Number(txtMonth);
+            if (Love <= 22) {
+                strCardName = CardName(Love);
+                strResult += "<br>愛情牌:" + strCardName;
+            } else {
+                Love -= 22;
+                strCardName = CardName(Love);
+                strResult += "<br>愛情牌:" + strCardName;
+            }
+
+            // 財富牌
+            Money = Soul + Number(txtDay);
+            if (Money <= 22) {
+                strCardName = CardName(Money);
+                strResult += "<br>財富牌:" + strCardName;
+            } else {
+                Money -= 22;
+                strCardName = CardName(Money);
+                strResult += "<br>財富牌:" + strCardName;
+            }
+
+            var d = new Date();
+            var currentYear = d.getFullYear();
+
+            Total = currentYear + Number(txtMonth) + Number(txtDay);
+            strTotal = Total.toString();
+
+            People = 0;
+            for (iLp = 0; iLp < 4; iLp++) {
+                People += Number(strTotal.substring(iLp, iLp + 1));
+            }
+
+            // 流年牌
+            if (People <= 22) {
+                strCardName = CardName(People);
+                strResult += "<br>" + currentYear.toString() + " 流年牌:" + strCardName;
+            } else {
+                People -= 22;
+                strCardName = CardName(People);
+                strResult += "<br>" + currentYear.toString() + " 流年牌:" + strCardName;
+            }
+
+            var nextYear = d.getFullYear() + 1;
+
+            Total = nextYear + Number(txtMonth) + Number(txtDay);
+            strTotal = Total.toString();
+
+            People = 0;
+            for (iLp = 0; iLp < 4; iLp++) {
+                People += Number(strTotal.substring(iLp, iLp + 1));
+            }
+
+            // 流年牌
+            if (People <= 22) {
+                strCardName = CardName(People);
+                strResult += "<br>" + nextYear.toString() + " 流年牌:" + strCardName;
+            } else {
+                People -= 22;
+                strCardName = CardName(People);
+                strResult += "<br>" + nextYear.toString() + " 流年牌:" + strCardName;
+            }
+
+            //alert(strResult);
+
+            //document.getElementById("demo").innerText = strResult;
+
+            document.all('labResult').innerHTML = strResult;
+
+        }
+
+
+        function CardName(Number) {
+            var strCardName;
+            switch (Number) {
+                case 1:
+                    strCardName = "魔術師";
+                    break;
+
+                case 2:
+                    strCardName = "女祭司";
+                    break;
+
+                case 3:
+                    strCardName = "皇后";
+                    break;
+
+                case 4:
+                    strCardName = "皇帝";
+                    break;
+
+                case 5:
+                    strCardName = "教皇";
+                    break;
+
+                case 6:
+                    strCardName = "戀人";
+                    break;
+
+                case 7:
+                    strCardName = "戰車";
+                    break;
+
+                case 8:
+                    strCardName = "力量";
+                    break;
+
+                case 9:
+                    strCardName = "隱者";
+                    break;
+
+                case 10:
+                    strCardName = "命運之輪";
+                    break;
+
+                case 11:
+                    strCardName = "正義";
+                    break;
+
+                case 12:
+                    strCardName = "吊人";
+                    break;
+
+                case 13:
+                    strCardName = "死神";
+                    break;
+
+                case 14:
+                    strCardName = "節制";
+                    break;
+
+                case 15:
+                    strCardName = "惡魔";
+                    break;
+
+                case 16:
+                    strCardName = "塔";
+                    break;
+
+                case 17:
+                    strCardName = "星星";
+                    break;
+
+                case 18:
+                    strCardName = "月亮";
+                    break;
+
+                case 19:
+                    strCardName = "太陽";
+                    break;
+
+                case 20:
+                    strCardName = "審判";
+                    break;
+
+                case 21:
+                    strCardName = "世界";
+                    break;
+
+                case 22:
+                    strCardName = "愚人";
+                    break;
+            }
+
+            return strCardName;
+        }
+
+        function ShowNumber() {
+
+
+            var txtYear = document.getElementById('txtYear').value;
+            var txtMonth = document.getElementById('txtMonth').value;
+            var txtDay = document.getElementById('txtDay').value;
+            //var canvas = document.getElementById("canvas");
+            //var ctx = canvas.getContext("2d");
+            var strData = txtYear + txtMonth + txtDay;
+            var strDay = txtDay;
+
+            var iDataLen = strData.length;
+            var TmpString, Constellation;
+            var iLp;
+
+            document.all('labResult').innerHTML = "";
+            //ViewClear();
+            //ShowView();
+            //var Today=new Date();
+
+
+            //alert("今天日期是 " + Today.getFullYear()+ " 年 " + (Today.getMonth()+1) + " 月 " + Today.getDate() + " 日");
+
+
+            //document.getElementById('labResult').value = "445";
+
+
+            //document.location.href='https://tw.yahoo.com';
+
+            TmpString = 0;
+            for (iLp = 0; iLp < iDataLen; iLp++) {
+                TmpString += Number(strData.substring(iLp, iLp + 1));
+            }
+
+            while (TmpString > 9) {
+                strData = TmpString.toString();
+                iDataLen = strData.length;
+                TmpString = 0;
+                for (iLp = 0; iLp < iDataLen; iLp++) {
+                    TmpString += Number(strData.substring(iLp, iLp + 1));
+                }
+            }
+
+            //Constellation ＝ Number(strDay);
+
+            if (txtDay.length == 1) strConstellation = txtMonth + "0" + txtDay;
+
+            //if(strConstellation >= 101)
+            //alert(strConstellation);
+
+            //TmpString = 7;
+            switch (TmpString) {
+                case 1:
+                    ShowNumber1();
+                    break;
+
+                case 2:
+                    ShowNumber2();
+                    break;
+
+                case 3:
+                    ShowNumber3();
+                    break;
+
+                case 4:
+                    ShowNumber4();
+                    break;
+
+                case 5:
+                    ShowNumber5();
+                    break;
+
+                case 6:
+                    ShowNumber6();
+                    break;
+
+                case 7:
+                    ShowNumber7();
+                    break;
+
+                case 8:
+                    ShowNumber8();
+                    break;
+
+                case 9:
+                    ShowNumber9();
+                    break;
+            }
+        }
+
+        function ShowNumber1() {
+            /*
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+             //画一个空心圆
+            ctx.beginPath();
+            ctx.arc(50,50,20,0,360,false);
+            ctx.lineWidth=3;
+            ctx.strokeStyle="green";
+            ctx.stroke();//画空心圆
+            ctx.closePath();
+            */
+            //document.all('labResult').innerHTML ="1號人<br>簡單說就是男生特質，有責任，愛面子，獨立敢想敢要，有點自戀";
+
+            var strResult;
+
+            strResult = "生命靈數：1號人\n";
+
+            if (strConstellation <= 119 || strConstellation >= 1222) {
+                strResult += "星座：魔羯座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你的自尊心很強哦！會默默的努力讓自己有所成就。 "
+            }
+
+            if (strConstellation >= 120 && strConstellation <= 218) {
+                strResult += "星座：水瓶座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你有點自閉，有時候會顯得太過我行我素了些。 "
+            }
+
+            if (strConstellation >= 219 && strConstellation <= 320) {
+                strResult += "星座：雙魚座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你容易沈溺在自己的世界的，忘掉了身邊還有別人存在。 "
+            }
+
+            if (strConstellation >= 321 && strConstellation <= 419) {
+                strResult += "星座：牡羊座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你是個主觀很強的人，只想著自己想做的事。"
+            }
+
+            if (strConstellation >= 420 && strConstellation <= 520) {
+                strResult += "星座：金牛座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你的行動力很強，對事自有一套，做法也不喜歡受干涉。"
+            }
+
+            if (strConstellation >= 521 && strConstellation <= 621) {
+                strResult += "星座：雙子座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "喜歡自由自在的你，對於自己有興趣的事情都會去鑽研哦！"
+            }
+
+            if (strConstellation >= 622 && strConstellation <= 722) {
+                strResult += "星座：巨蟹座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你個性上有點自閉哦！不容易真正和別人有好的交流。"
+            }
+
+            if (strConstellation >= 723 && strConstellation <= 822) {
+                strResult += "星座：獅子座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你非常自我，可能因此造成人際問題。 "
+            }
+
+            if (strConstellation >= 823 && strConstellation <= 922) {
+                strResult += "星座：處女座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你有點孤僻，常常覺得別人不了解你，要多與別人互動才好。"
+            }
+
+            if (strConstellation >= 923 && strConstellation <= 1022) {
+                strResult += "星座：天秤座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你比較獨立，在決定事情時也比較不會猶豫不決。"
+            }
+
+            if (strConstellation >= 1023 && strConstellation <= 1121) {
+                strResult += "星座：天蠍座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你很重視自己的目標，不太理睬身邊其他人在做些什麼。"
+            }
+
+            if (strConstellation >= 1122 && strConstellation <= 1221) {
+                strResult += "星座：射手座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你常常我行我素，一有目標就會很快去執行，行動力很強。"
+            }
+
+            alert(strResult);
+        }
+
+        function ShowNumber2() {
+            /*
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+             //画一个空心圆
+            ctx.beginPath();
+            ctx.arc(50,150,20,0,360,false);
+            ctx.lineWidth=3;
+            ctx.strokeStyle="green";
+            ctx.stroke();//画空心圆
+            ctx.closePath();
+            */
+            //document.all('labResult').innerHTML ="2號人<br>屬於女性特質喜歡秀氣精巧的東西；需要貼心；窩心；不喜歡和人起衝突……有時候對他講話不能太大聲需要別人幫她做決定喜歡溫柔的對待。有同情心觀察力強種浪漫";
+
+            var strResult;
+
+            strResult = "生命靈數：2號人\n";
+
+            if (strConstellation <= 119 || strConstellation >= 1222) {
+                strResult += "星座：魔羯座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你覺得與人交遊是件重要的事，另外感情也是生活重心。"
+            }
+
+            if (strConstellation >= 120 && strConstellation <= 218) {
+                strResult += "星座：水瓶座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你會比較受到別人的影響，但還不會失去自己原本的主張。"
+            }
+
+            if (strConstellation >= 219 && strConstellation <= 320) {
+                strResult += "星座：雙魚座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你很容易受到別人的引導，而忘記了自己原本的方向哦！"
+            }
+
+            if (strConstellation >= 321 && strConstellation <= 419) {
+                strResult += "星座：牡羊座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你會在意別人看你的眼光，個性比較害羞一點。"
+            }
+
+            if (strConstellation >= 420 && strConstellation <= 520) {
+                strResult += "星座：金牛座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你會重視人際關係，在與別人相處時也比較容易受影響。"
+            }
+
+            if (strConstellation >= 521 && strConstellation <= 621) {
+                strResult += "星座：雙子座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你是最喜歡與別人溝通的雙子座，不過很容易受外來的影響。"
+            }
+
+            if (strConstellation >= 622 && strConstellation <= 722) {
+                strResult += "星座：巨蟹座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "會很看重別人的意見，要小心因此喪失自己的意見。"
+            }
+
+            if (strConstellation >= 723 && strConstellation <= 822) {
+                strResult += "星座：獅子座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "別人的肯定對你來說非常重要，可能因此而失去自我。"
+            }
+
+            if (strConstellation >= 823 && strConstellation <= 922) {
+                strResult += "星座：處女座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你會很注重每個人的意見，與別人來往時也是非常誠懇的。"
+            }
+
+            if (strConstellation >= 923 && strConstellation <= 1022) {
+                strResult += "星座：天秤座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你是最需要別人陪伴的，如果沒有伴會感到不安。"
+            }
+
+            if (strConstellation >= 1023 && strConstellation <= 1121) {
+                strResult += "星座：天蠍座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你很在乎兩人關係上的忠誠，會全心全意的對待另一半。"
+            }
+
+            if (strConstellation >= 1122 && strConstellation <= 1221) {
+                strResult += "星座：射手座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "喜歡與別人溝通相處的你，在人際上會得到大家的幫忙。"
+            }
+
+            alert(strResult);
+        }
+
+        function ShowNumber3() {
+            /*
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+             //画一个空心圆
+            ctx.beginPath();
+            ctx.arc(50,250,20,0,360,false);
+            ctx.lineWidth=3;
+            ctx.strokeStyle="green";
+            ctx.stroke();//画空心圆
+            ctx.closePath();
+            */
+            //document.all('labResult').innerHTML ="3號人<br>喜歡驚喜有創意；打破規則；走到哪裡喜歡玩到哪；腦袋有很多很多不一樣的東西。活動力強不喜歡被框架對於認為對的事情會堅持到底就算付出代價還是會堅持到底敢夢敢想；心裡住著小男孩小女孩；聰明有理想好奇心強，其實只要小孩子有的特質3號都有";
+
+            var strResult;
+
+            strResult = "生命靈數：3號人\n";
+
+            if (strConstellation <= 119 || strConstellation >= 1222) {
+                strResult += "星座：魔羯座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "只要你多加努力就能展現出自己的才華，會很有成就哦！"
+            }
+
+            if (strConstellation >= 120 && strConstellation <= 218) {
+                strResult += "星座：水瓶座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你是多才多藝的人！尤其擅長於表達與溝通哦！"
+            }
+
+            if (strConstellation >= 219 && strConstellation <= 320) {
+                strResult += "星座：雙魚座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你是天生的藝術家，不過還是要稍為注意一下現實環境。"
+            }
+
+            if (strConstellation >= 321 && strConstellation <= 419) {
+                strResult += "星座：牡羊座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "喜歡表達自己的想法，但也要多聽聽別人的意見哦！"
+            }
+
+            if (strConstellation >= 420 && strConstellation <= 520) {
+                strResult += "星座：金牛座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你還蠻靈活的，喜歡發表自己所研究出來的事物。"
+            }
+
+            if (strConstellation >= 521 && strConstellation <= 621) {
+                strResult += "星座：雙子座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你多才多藝，什麼東西都是一學就會。"
+            }
+
+            if (strConstellation >= 622 && strConstellation <= 722) {
+                strResult += "星座：巨蟹座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "喜歡感情上的表達與溝通，在藝術上會有不錯的天份！"
+            }
+
+            if (strConstellation >= 723 && strConstellation <= 822) {
+                strResult += "星座：獅子座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你最愛表現自己，通常是人際關係中的佼佼者。"
+            }
+
+            if (strConstellation >= 823 && strConstellation <= 922) {
+                strResult += "星座：處女座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "能力頗佳的你，適合擔任發言或主持的任務，會勝任愉快哦！"
+            }
+
+            if (strConstellation >= 923 && strConstellation <= 1022) {
+                strResult += "星座：天秤座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你非常有才華，在各項藝術領域都有不錯的天份。"
+            }
+
+            if (strConstellation >= 1023 && strConstellation <= 1121) {
+                strResult += "星座：天蠍座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "對於溝通與人際關係是你的專長，總能夠得到大家幫助。"
+            }
+
+            if (strConstellation >= 1122 && strConstellation <= 1221) {
+                strResult += "星座：射手座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你是相當有才華的人哦！很能夠表現自己在藝術上的才華。"
+            }
+
+            alert(strResult);
+        }
+
+        function ShowNumber4() {
+            /*
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+             //画一个空心圆
+            ctx.beginPath();
+            ctx.arc(150,50,20,0,360,false);
+            ctx.lineWidth=3;
+            ctx.strokeStyle="green";
+            ctx.stroke();//画空心圆
+            ctx.closePath();
+            */
+            //document.all('labResult').innerHTML ="4號人<br>數字觀念強；務實個性穩定；做事有計劃有家庭觀念；喜歡按照計畫行事。但一次只能做一件事情…容易因情緒起伏大而花錢、膽子小害怕改變重安全感喜歡穩定安定。重視品牌的東西條理清楚有危機意識很多4號人容易較早進入社會賺錢";
+
+            var strResult;
+
+            strResult = "生命靈數：4號人\n";
+
+            if (strConstellation <= 119 || strConstellation >= 1222) {
+                strResult += "星座：魔羯座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你很重視腳踏實地的生活，會努力讓自己生活穩定下來。"
+            }
+
+            if (strConstellation >= 120 && strConstellation <= 218) {
+                strResult += "星座：水瓶座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你還蠻穩定的，會習慣維持某一種生活的方式。"
+            }
+
+            if (strConstellation >= 219 && strConstellation <= 320) {
+                strResult += "星座：雙魚座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你是追求穩定生活的人，不喜歡太過混亂的生活。"
+            }
+
+            if (strConstellation >= 321 && strConstellation <= 419) {
+                strResult += "星座：牡羊座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你對未來很關心，很少胡思亂想，會腳踏實地的努力。"
+            }
+
+            if (strConstellation >= 420 && strConstellation <= 520) {
+                strResult += "星座：金牛座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你非常固執！你的想法常常和別人不太一樣。"
+            }
+
+            if (strConstellation >= 521 && strConstellation <= 621) {
+                strResult += "星座：雙子座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你是比較重視生活規律的人，看來隨和但自有一套規則。"
+            }
+
+            if (strConstellation >= 622 && strConstellation <= 722) {
+                strResult += "星座：巨蟹座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你有點龜毛，尤其重視自己生活上的規律。"
+            }
+
+            if (strConstellation >= 723 && strConstellation <= 822) {
+                strResult += "星座：獅子座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你很固執，而且在行動上比較缺乏冒險犯難的精神。"
+            }
+
+            if (strConstellation >= 823 && strConstellation <= 922) {
+                strResult += "星座：處女座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你最龜毛，尤其容易劃地自限，要特別注意。"
+            }
+
+            if (strConstellation >= 923 && strConstellation <= 1022) {
+                strResult += "星座：天秤座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你重視實際層面的，也是比較有責任感的哦！"
+            }
+
+            if (strConstellation >= 1023 && strConstellation <= 1121) {
+                strResult += "星座：天蠍座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你是非常非常固執的，一旦你決定的事就難以改變。"
+            }
+
+            if (strConstellation >= 1122 && strConstellation <= 1221) {
+                strResult += "星座：射手座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你最重視生活規律的，而且也很有自己的想法。"
+            }
+
+            alert(strResult);
+        }
+
+        function ShowNumber5() {
+            /*
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+             //画一个空心圆
+            ctx.beginPath();
+            ctx.arc(150,150,20,0,360,false);
+            ctx.lineWidth=3;
+            ctx.strokeStyle="green";
+            ctx.stroke();//画空心圆
+            ctx.closePath();
+            */
+            //document.all('labResult').innerHTML ="5號人<br>執行力佳、很熱情人際關係很好、愛好自由喜歡交朋友、人緣好、喜歡新的資訊、喜歡新鮮感不願意輸人、只要是有興趣的東西都會搶先的追求流行擁有、喜歡高科技的東西。喜歡交朋友朋友第一、很怕被約束、口才好很敢講";
+
+            var strResult;
+
+            strResult = "生命靈數：5號人\n";
+
+            if (strConstellation <= 119 || strConstellation >= 1222) {
+                strResult += "星座：魔羯座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你比較開朗，對一些事比較不會那麼憂慮。"
+            }
+
+            if (strConstellation >= 120 && strConstellation <= 218) {
+                strResult += "星座：水瓶座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你常常讓人找不到！朋友也是多不勝數。"
+            }
+
+            if (strConstellation >= 219 && strConstellation <= 320) {
+                strResult += "星座：雙魚座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你比較沒有目標，幾乎什麼事都會去做做看，但都維持不久。"
+            }
+
+            if (strConstellation >= 321 && strConstellation <= 419) {
+                strResult += "星座：牡羊座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你非常愛玩，尤其喜歡到處去湊熱鬧。"
+            }
+
+            if (strConstellation >= 420 && strConstellation <= 520) {
+                strResult += "星座：金牛座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你多才多藝，如果能夠定下來會更有成就。"
+            }
+
+            if (strConstellation >= 521 && strConstellation <= 621) {
+                strResult += "星座：雙子座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "喜歡到處亂跑的你真是交友滿天下，心性上也比較不穩定。"
+            }
+
+            if (strConstellation >= 622 && strConstellation <= 722) {
+                strResult += "星座：巨蟹座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你不一定喜歡亂跑，但不能受到太多拘束，想自由自在。"
+            }
+
+            if (strConstellation >= 723 && strConstellation <= 822) {
+                strResult += "星座：獅子座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你最熱愛自由！一般來說你是相當大方的。"
+            }
+
+            if (strConstellation >= 823 && strConstellation <= 922) {
+                strResult += "星座：處女座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你是屬於比較外向的，容易交到許多朋友，但知心的並不多。"
+            }
+
+            if (strConstellation >= 923 && strConstellation <= 1022) {
+                strResult += "星座：天秤座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你喜愛交遊，對感到好玩的事情都不會放過。"
+            }
+
+            if (strConstellation >= 1023 && strConstellation <= 1121) {
+                strResult += "星座：天蠍座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你還蠻開朗的，也是最容易與大家打成一片的。"
+            }
+
+            if (strConstellation >= 1122 && strConstellation <= 1221) {
+                strResult += "星座：射手座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "哇！你真是超愛亂跑，一直待在同一個地方會讓你很難過。"
+            }
+
+            alert(strResult);
+        }
+
+        function ShowNumber6() {
+            /*
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+             //画一个空心圆
+            ctx.beginPath();
+            ctx.arc(150,250,20,0,360,false);
+            ctx.lineWidth=3;
+            ctx.strokeStyle="green";
+            ctx.stroke();//画空心圆
+            ctx.closePath();
+            */
+            //document.all('labResult').innerHTML ="6號人<br>喜歡跟人群互動；熱心表達慾強；有憐憫心；對人真誠…燈光美氣氛佳”感覺對了”一切都好說給人溫暖的感覺，重人情";
+
+            var strResult;
+
+            strResult = "生命靈數：6號人\n";
+
+            if (strConstellation <= 119 || strConstellation >= 1222) {
+                strResult += "星座：魔羯座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "感情是你生活平穩的重點，希望經營有未來的感情生活。"
+            }
+
+            if (strConstellation >= 120 && strConstellation <= 218) {
+                strResult += "星座：水瓶座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你是比較重感情，桃花多，感情問題會比較多。"
+            }
+
+            if (strConstellation >= 219 && strConstellation <= 320) {
+                strResult += "星座：雙魚座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "感情是你最煩惱的事，常常因此而受到打擊或挫折。"
+            }
+
+            if (strConstellation >= 321 && strConstellation <= 419) {
+                strResult += "星座：牡羊座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你很固執哦！尤其是感情層面，而且非常的主觀。"
+            }
+
+            if (strConstellation >= 420 && strConstellation <= 520) {
+                strResult += "星座：金牛座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你非常念舊，對於自己重視的東西會非常呵護。"
+            }
+
+            if (strConstellation >= 521 && strConstellation <= 621) {
+                strResult += "星座：雙子座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你最重視人情味，尤其重視老朋友之間的感情。"
+            }
+
+            if (strConstellation >= 622 && strConstellation <= 722) {
+                strResult += "星座：巨蟹座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你最重感情，尤其在感情世界裡很要求完美。"
+            }
+
+            if (strConstellation >= 723 && strConstellation <= 822) {
+                strResult += "星座：獅子座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你在感情的表達上會顯得害羞。"
+            }
+
+            if (strConstellation >= 823 && strConstellation <= 922) {
+                strResult += "星座：處女座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你是非常非常念舊的人哦！尤其是感情上，常常很難割捨。"
+            }
+
+            if (strConstellation >= 923 && strConstellation <= 1022) {
+                strResult += "星座：天秤座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "感情的順利與否對你來說非常重要哦！要小心的經營才好。"
+            }
+
+            if (strConstellation >= 1023 && strConstellation <= 1121) {
+                strResult += "星座：天蠍座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你是個完美主義者，尤其是非常重視感情方面的經營。"
+            }
+
+            if (strConstellation >= 1122 && strConstellation <= 1221) {
+                strResult += "星座：射手座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你是很重視親情的人哦！在人際交流上也是很有一套的。"
+            }
+
+            alert(strResult);
+        }
+
+        function ShowNumber7() {
+            /*
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+             //画一个空心圆
+            ctx.beginPath();
+            ctx.arc(250,50,20,0,360,false);
+            ctx.lineWidth=3;
+            ctx.strokeStyle="green";
+            ctx.stroke();//画空心圆
+            ctx.closePath();
+            */
+            //document.all('labResult').innerHTML ="7號人<br>做事情深思熟慮；擅長分析、理性、也很有宗教緣、貴人運很好；遇到問題遇到困難開口就會有人幫忙。有時比較鐵齒長輩上司緣不錯。注重內在形象。做事穩非黑即白比較不講人情理性善分析";
+
+            var strResult;
+
+            strResult = "生命靈數：7號人\n";
+
+            if (strConstellation <= 119 || strConstellation >= 1222) {
+                strResult += "星座：魔羯座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你是一個非常聰明的人，但有時會因情緒化而下錯判斷。"
+            }
+
+            if (strConstellation >= 120 && strConstellation <= 218) {
+                strResult += "星座：水瓶座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你比較理性的，太過聰明的話有時候會不近人情。"
+            }
+
+            if (strConstellation >= 219 && strConstellation <= 320) {
+                strResult += "星座：雙魚座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你想得很多，但是一旦遇到自己的事情就會比較主觀。"
+            }
+
+            if (strConstellation >= 321 && strConstellation <= 419) {
+                strResult += "星座：牡羊座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "對於自己覺得有理的地方非常的堅持，不聽別人的意見。"
+            }
+
+            if (strConstellation >= 420 && strConstellation <= 520) {
+                strResult += "星座：金牛座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你是有叛逆性格，不易被別人說服，自有一套想法。"
+            }
+
+            if (strConstellation >= 521 && strConstellation <= 621) {
+                strResult += "星座：雙子座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你刁鑽古怪，常想些別人都不會想到的問題。"
+            }
+
+            if (strConstellation >= 622 && strConstellation <= 722) {
+                strResult += "星座：巨蟹座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你想得很多，表現出來的模樣也頗為固執己見。"
+            }
+
+            if (strConstellation >= 723 && strConstellation <= 822) {
+                strResult += "星座：獅子座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你很善於思考！雖然比較主觀，但還可以溝通。"
+            }
+
+            if (strConstellation >= 823 && strConstellation <= 922) {
+                strResult += "星座：處女座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你的個性比較剛直，不過在與人交往上還是要多體諒別人哦！"
+            }
+
+            if (strConstellation >= 923 && strConstellation <= 1022) {
+                strResult += "星座：天秤座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你喜歡思考，對許多事都會找出合理的方法。"
+            }
+
+            if (strConstellation >= 1023 && strConstellation <= 1121) {
+                strResult += "星座：天蠍座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你想的很多，常想到一些別人找不到的問題，非常聰明。"
+            }
+
+            if (strConstellation >= 1122 && strConstellation <= 1221) {
+                strResult += "星座：射手座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你真是想得太多，又有點固執的人，懷疑的心態很強哦！"
+            }
+
+            alert(strResult);
+
+        }
+
+        function ShowNumber8() {
+            /*
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+             //画一个空心圆
+            ctx.beginPath();
+            ctx.arc(250,150,20,0,360,false);
+            ctx.lineWidth=3;
+            ctx.strokeStyle="green";
+            ctx.stroke();//画空心圆
+            ctx.closePath();
+            */
+            //document.all('labResult').innerHTML ="8號人<br>比較誠實、務實、好勝心強、金錢敏銳度高有錢的觀念。知道哪裡有錢賺。可以嗅到賺錢味道對事理性對人感性實踐力很強。";
+
+            var strResult;
+
+            strResult = "生命靈數：8號人\n";
+
+            if (strConstellation <= 119 || strConstellation >= 1222) {
+                strResult += "星座：魔羯座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "對你來說功成名就吸引力大，會努力成為重要的人物。"
+            }
+
+            if (strConstellation >= 120 && strConstellation <= 218) {
+                strResult += "星座：水瓶座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你比較重視物質，會去追求自己所想要的生活。"
+            }
+
+            if (strConstellation >= 219 && strConstellation <= 320) {
+                strResult += "星座：雙魚座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你是喜歡享受，對於生活上的小事都非常的注意。"
+            }
+
+            if (strConstellation >= 321 && strConstellation <= 419) {
+                strResult += "星座：牡羊座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "很重視實際層面的成就，會很努力在學習和工作上。"
+            }
+
+            if (strConstellation >= 420 && strConstellation <= 520) {
+                strResult += "星座：金牛座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你很重視實際層面的成就，會努力讓自己更加的優秀或成功。"
+            }
+
+            if (strConstellation >= 521 && strConstellation <= 621) {
+                strResult += "星座：雙子座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你喜歡享受生活，會特別的注重自己的生活品質。"
+            }
+
+            if (strConstellation >= 622 && strConstellation <= 722) {
+                strResult += "星座：巨蟹座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你很重視現實上的成就與穩定，會努力讓自己的生活更好。"
+            }
+
+            if (strConstellation >= 723 && strConstellation <= 822) {
+                strResult += "星座：獅子座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你是一個講究生活品味的人哦！喜歡從容優渥的過日子。"
+            }
+
+            if (strConstellation >= 823 && strConstellation <= 922) {
+                strResult += "星座：處女座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你是比較圓滑的人，很了解人際上的交流要如何互動。"
+            }
+
+            if (strConstellation >= 923 && strConstellation <= 1022) {
+                strResult += "星座：天秤座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "很重視生活的感覺，不能忍受太差的生活環境，有雅癖傾向。"
+            }
+
+            if (strConstellation >= 1023 && strConstellation <= 1121) {
+                strResult += "星座：天蠍座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你很重視自己的地社會地位，認為應該得到的就會去爭取。"
+            }
+
+            if (strConstellation >= 1122 && strConstellation <= 1221) {
+                strResult += "星座：射手座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你很重視自己的成就和外在的表現，喜歡富裕的生活環境。"
+            }
+
+            alert(strResult);
+        }
+
+        function ShowNumber9() {
+            /*
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+             //画一个空心圆
+            ctx.beginPath();
+            ctx.arc(250,250,20,0,360,false);
+            ctx.lineWidth=3;
+            ctx.strokeStyle="green";
+            ctx.stroke();//画空心圆
+            ctx.closePath();
+            */
+
+            //document.all('labResult').innerHTML ="9號人<br>大愛精神，犧牲奉獻。屆退休時易往慈善或環保方面。很會看局面，對人或事只要認同會不顧一切支持，有時會給人西瓜靠大邊有智慧重家庭，家庭觀比較重點子多";
+
+            var strResult;
+
+            strResult = "生命靈數：9號人\n";
+
+            if (strConstellation <= 119 || strConstellation >= 1222) {
+                strResult += "星座：魔羯座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你對自己想做的事非常投入，不過有時會忘了實際狀況。"
+            }
+
+            if (strConstellation >= 120 && strConstellation <= 218) {
+                strResult += "星座：水瓶座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你的理想非常高遠，如果持續努力，成功的機會是很大的。"
+            }
+
+            if (strConstellation >= 219 && strConstellation <= 320) {
+                strResult += "星座：雙魚座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你對於某些事都抱著很大的熱誠，過度的話會顯得特別偏執。"
+            }
+
+            if (strConstellation >= 321 && strConstellation <= 419) {
+                strResult += "星座：牡羊座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你是較不切實際的人，不過你的熱情可將不可能變可能。"
+            }
+
+            if (strConstellation >= 420 && strConstellation <= 520) {
+                strResult += "星座：金牛座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你充滿夢想的，但是要多學習如何落實在現實中。"
+            }
+
+            if (strConstellation >= 521 && strConstellation <= 621) {
+                strResult += "星座：雙子座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你會胡思亂想，同時也是比較熱情的。 "
+            }
+
+            if (strConstellation >= 622 && strConstellation <= 722) {
+                strResult += "星座：巨蟹座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你相當熱情，但剛到新的環境會比較害羞。"
+            }
+
+            if (strConstellation >= 723 && strConstellation <= 822) {
+                strResult += "星座：獅子座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你的熱情很容易感動別人，在人群中常是人氣很旺的明星！"
+            }
+
+            if (strConstellation >= 823 && strConstellation <= 922) {
+                strResult += "星座：處女座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "對你投入的事情非常的狂熱，有時甚至因此而廢寢忘食。"
+            }
+
+            if (strConstellation >= 923 && strConstellation <= 1022) {
+                strResult += "星座：天秤座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你許多想法都有些不切實際，而且熱情常常無法持久哦！"
+            }
+
+            if (strConstellation >= 1023 && strConstellation <= 1121) {
+                strResult += "星座：天蠍座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "對於你喜歡或相信的事是非常狂熱的，但表面上看不出來。"
+            }
+
+            if (strConstellation >= 1122 && strConstellation <= 1221) {
+                strResult += "星座：射手座\n\n";
+                strResult += "簡易分析\n";
+                strResult += "你是很有理想的人，也是舉辦活動的高手，受到大家歡迎！"
+            }
+
+            alert(strResult);
+        }
+
+
+
+
+        function ViewClear() {
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+            ctx.clearRect(0, 0, 300, 300); // clear canvas
+        }
+
+        function ShowView() {
+
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+
+            ctx.fillStyle = "rgb(190,119,255)"; // 把「填滿樣式」設為紅 200 綠 0 藍 0
+            ctx.fillRect(0, 0, 100, 100); // 畫一個填充的長方形
+            ctx.fillRect(0, 200, 100, 100); // 畫一個填充的長方形
+            ctx.fillRect(200, 0, 100, 100); // 畫一個填充的長方形
+            ctx.fillRect(200, 200, 100, 100); // 畫一個填充的長方形
+            ctx.fillRect(100, 100, 100, 100); // 畫一個填充的長方形
+
+            ctx.fillStyle = "rgb(90,90,173)"; // 把「填滿樣式」設為紅 200 綠 0 藍 0
+            ctx.fillRect(0, 100, 100, 100); // 畫一個填充的長方形
+            ctx.fillRect(100, 0, 100, 100); // 畫一個填充的長方形
+            ctx.fillRect(200, 100, 100, 100); // 畫一個填充的長方形
+            ctx.fillRect(100, 200, 100, 100); // 畫一個填充的長方形
+
+            ctx.fillStyle = "rgb(255,255,255)"; // 把「填滿樣式」設為紅 200 綠 0 藍 0
+            ctx.font = "30px bold Arial";
+            ctx.fillText("1", 43, 59);
+            ctx.fillText("2", 43, 159);
+            ctx.fillText("3", 43, 259);
+
+            ctx.fillText("4", 143, 59);
+            ctx.fillText("5", 143, 159);
+            ctx.fillText("6", 143, 259);
+
+            ctx.fillText("7", 243, 59);
+            ctx.fillText("8", 243, 159);
+            ctx.fillText("9", 243, 259);
+
+            /*
+            //画一个空心圆
+            ctx.beginPath();
+            ctx.arc(200,200,50,0,360,false);
+            ctx.lineWidth=5;
+            ctx.strokeStyle="green";
+            ctx.stroke();//画空心圆
+            ctx.closePath();
+            */
+        }
+    </script>
+</head>
+
+<body>
+
+
+
+    <!--loading畫面-->
+    <script>
+        $(window).load(function () {
+            $('#loading').hide();
+        });
+
+        function add_fpd(FORM, JSP) {
+            FORM.action = JSP;
+            FORM.submit();
+        }
+
+        function search_checkform(F) {
+            if (F._qsearch.value == "") {
+                alert("請輸入文章搜尋關鍵字");
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+
+    <!--loading畫面-->
+    <div id="loading" class="lodding">
+        <div id="circularG">
+            <div id="circularG_1" class="circularG"></div>
+            <div id="circularG_2" class="circularG"></div>
+            <div id="circularG_3" class="circularG"></div>
+            <div id="circularG_4" class="circularG"></div>
+            <div id="circularG_5" class="circularG"></div>
+            <div id="circularG_6" class="circularG"></div>
+            <div id="circularG_7" class="circularG"></div>
+            <div id="circularG_8" class="circularG"></div>
+        </div>
+        <div class="loading_tit">讀取中...</div>
+    </div>
+
+
+    <!--版頭3-->
+    <div class="header3" id="top">
+
+        <div class="headerTopBg">
+            <div class="wrap">
+                <!--手機menu按鍵-->
+                <div class="menu_btn3"><span> </span> <span> </span> <span>
+                    </span></div>
+
+                <!--版頭區塊_右半部-->
+                <div class="header_rightArea3">
+                    <!--版頭區塊_右半部_上-->
+                    <div class="headerRight_topArea3">
+                        <!--電腦版搜尋框效果-->
+                        <script>
+                            $(document).ready(function () {
+                                $("#search_btnPC3").click(function () {
+                                    $("#searchArea_inPC3").slideToggle(200);
+                                    $(".pc_cart_listArea3").removeClass("show");
+                                });
+                                $("#search_closePC3").click(function () {
+                                    $("#searchArea_inPC3").slideUp(200);
+                                });
+                            });
+                        </script>
+                        <!--PC_社群-->
+                        <div class="Community_area">
+
+                            <div class="clearfloat"></div>
+                        </div>
+
+                        <!--PC_會員專區-->
+                        <div class="pc_member_area3">
+                            <div class="pc_member_inArea3">
+
+                                <a href="javascript:void(0);" class="login_open">
+                                    <i class="material-icons">person</i> 加入會員 | 會員登入
+                                </a>
+
+                            </div>
+
+                            <div class="pc_member_inIcon3">
+                                <a href="javascript:void(0);">
+                                    <i class="material-icons">person</i>
+                                </a>
+                            </div>
+
+                            <div class="pc_member_listArea3">
+
+                                <div class="pc_member_list3">
+                                    <a href="javascript:void(0);" class="login_open">會員登入</a>
+                                    <!--class內加login_open即可開啟會員登入和忘記密碼視窗-->
+                                </div>
+                                <div class="pc_member_list3">
+                                    <a href="javascript:void(0);" class="login_open">加入會員</a>
+                                </div>
+
+
+                                <div class="clearfloat"></div>
+                            </div>
+                        </div>
+
+
+                        <!--搜尋區塊-->
+                        <div class="search_areaPC3">
+                            <!--搜尋icon-->
+                            <div class="search_iconPC3">
+                                <label id="search_btnPC3" />
+                                <i class="material-icons">search</i>
+                                </label>
+                            </div>
+
+
+                            <!--搜尋框-->
+                            <div class="search_inAreaPC3" id="searchArea_inPC3">
+                                <form name="form_search" method="post" action="../article/article.jsp"
+                                    onsubmit="return search_checkform(this)">
+                                    <div class="search_inBoxPC3">
+                                        <input type="text" placeholder="搜尋" name="_qsearch" id="_qsearch" value="" />
+                                        <a href="javascrip:void(0);" id="search_closePC3">
+                                            <span class="close_iconPC"> × </span> <span> 關閉</span>
+                                        </a>
+                                    </div>
+                                </form>
+
+                                <div class="clearfloat">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="clearfloat">
+                        </div>
+                    </div>
+
+                    <!--logo-->
+                    <div class="logo3">
+                        <a href="../index/index.jsp">
+                            <img src="../images/logo.png" width="" height="" />
+                        </a>
+                    </div>
+
+                    <div class="clearfloat">
+                    </div>
+
+                </div>
+
+                <div class="clearfloat"></div>
+
+            </div>
+        </div>
+
+        <!--主按鍵背景-->
+        <div class="NavbarBg">
+            <div class="wrap">
+                <!--主按鍵-->
+                <div class="navbar3">
+                    <!--李靜唯簡介-->
+                    <div class="nav3"><a href="../about/about.jsp"> 李靜唯簡介 </a></div>
+
+                    <!--星占課程-->
+                    <div class="nav3"><a href="../course/course.jsp"> 星占課程 </a></div>
+
+                    <!--服務項目-->
+                    <div class="nav3"><a href="../service/service.jsp"> 服務項目 </a></div>
+
+                    <!--塔羅靈數計算機-->
+                    <div class="nav3"><a href="../divination/divination.jsp">
+                            塔羅靈數計算機 </a></div>
+
+                    <!--療癒商品-->
+                    <div class="nav3"><a target="_blank" href="http://www.marrylove.tw"> 療癒商品 </a></div>
+
+                    <!--精選文章-->
+                    <div class="nav3"><a href="../article/article.jsp"> 精選文章 </a></div>
+
+                    <div class="clearfloat"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--main-->
+    <div class="main inMain main3">
+
+        <!--內頁banner區-->
+        <div class="in_banner_area">
+            <div class="wrap">
+                <div class="in_banner">
+                    <!-- InstanceBeginEditable name="in_banner" -->
+                    <img src="images/in_banner.png" />
+                    <!-- InstanceEndEditable -->
+                </div>
+            </div>
+        </div>
+
+        <!--內容區塊-->
+        <div class="content">
+
+            <div class="wrap">
+
+                <!-- InstanceBeginEditable name="content" -->
+
+
+                <!--右側-->
+                <div class="right noleft wow zoomInUp">
+                    <!--動態效果 wow + animated樣式-->
+                    <!--沒有左側附加noleft -->
+
+                    <!--內頁標題1-->
+                    <div class="titStyle1 wow fadeInLeftBig">
+                        <!--動態效果 wow + animated樣式-->
+                        <span>
+                            <img src="../images/tit_icon.png" width="" height="" />
+                        </span>
+                        塔羅靈數計算機
+                    </div>
+
+
+                    <!--給工程加靈數計算機的範圍-->
+                    <div class="divination_area" style="">
+
+                        <table border="0">
+                            <tr>
+                                <!--<td><canvas id="canvas" width="300" height="300" style="background-color: yellow;"></canvas></td>-->
+                                <td valign="top">
+                                    <font color="#000">請輸入出生日期<br /></font>
+                                    <input type="text" id="txtYear" value="1984" maxlength="4"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+                                    <font color="#000">年</font>
+                                    <input type="text" id="txtMonth" value="1" style="" maxlength="2"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+                                    <font color="#000">月</font>
+                                    <input type="text" id="txtDay" value="1" style="" maxlength="2"
+                                        onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+                                    <font color="#000">日</font>
+
+                                    <button onclick="ShowCard()">計算</button><br /><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="300">
+                                    <font color="#000"><label for="female" id="labResult"></label></font>
+                                </td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="msg">
+                                        <p>&nbsp;</p>
+                                        <p>&nbsp;</p>
+                                        <p>&nbsp;<span
+                                                style="font-family: Arial, Helvetica, sans-serif, 'Century Gothic', 'Times New Roman', Times, serif, 微軟正黑體, 新細明體; letter-spacing: 1px;">人格牌位置呈現著您本身的核心性格</span>
+                                        </p>
+                                        <p>&nbsp;</p>
+                                        <p><span
+                                                style="font-family: Arial, Helvetica, sans-serif, 'Century Gothic', 'Times New Roman', Times, serif, 微軟正黑體, 新細明體; letter-spacing: 1px;">靈魂牌位置呈現著您本身內在的想法<br /></span>
+                                        </p>
+                                        <p>&nbsp;</p>
+                                        <p><span
+                                                style="font-family: Arial, Helvetica, sans-serif, 'Century Gothic', 'Times New Roman', Times, serif, 微軟正黑體, 新細明體; letter-spacing: 1px;">愛情牌位置呈現著您對於愛情的觀念<br /></span>
+                                        </p>
+                                        <p>&nbsp;</p>
+                                        <p><span
+                                                style="font-family: Arial, Helvetica, sans-serif, 'Century Gothic', 'Times New Roman', Times, serif, 微軟正黑體, 新細明體; letter-spacing: 1px;">財富牌位置呈現著您工作賺錢價值觀<br /><br /><br /><br />若想了解更多，請點加入會員<br />讓我們對您分析!!<br /><br /><br /><br /><span
+                                                    style="font-size: 20px;"><strong>塔羅密碼新書</strong></span><br /><span
+                                                    style="font-size: 20px;"><strong>【擁抱~塔羅密碼】即將上市!!!<br /></strong></span><br />歡迎有興趣的讀者請至各大書店
+                                                博客萊、金石堂等等通路詢問<br />或是直接私訊我們粉絲專頁直接訂購唷!!<br /><a
+                                                    href="https://www.facebook.com/XiaoWeiLaoShi/">https://www.facebook.com/XiaoWeiLaoShi/</a><br /><br /><img
+                                                    style="margin: 0px; padding: 0px; font-size: 14px; max-width: 100%; height: auto; color: #333333; font-family: 'microsoft yahei', 'Helvetica Neue', 'Open Sans', Helvetica, Arial, sans-serif;"
+                                                    src="http://www.weiwei262613.com/uploads/root/BOOK2.png" alt=""
+                                                    width="291" height="379" /></span></p>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+
+
+                    <!--表單區 按鍵區-->
+                    <div class="btn_area one">
+                        <input type="submit" value="加入會員" onclick="location='../member/add.jsp'" />
+                        <!--<input type="reset" value="重新填寫">-->
+                        <div class="clearfloat">
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="clearfloat">
+                </div>
+
+                <!-- InstanceEndEditable -->
+
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+
+
+
+    <script type="text/javascript" src="../../js/jquery.cookie.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function (e) {
+            if ($.cookie("CheckMember") == "true") {
+                $("#log_account").val($.cookie("loginAccount"));
+                $("#memory").attr("checked", true);
+            }
+        });
+        var isEmail =
+        /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/; // 使用 isEmail.test(欄位名稱) 檢查 E-Mail 是否格式正確 , 正確為 true
+        function checkform(F) {
+            if ($("#log_account").val() == "" || !isEmail.test($("#log_account").val())) {
+                alert("請輸入正確的帳號!!");
+                $("#log_account").focus();
+            } else if ($("#log_pwd").val() == "") {
+                alert("請輸入正確的密碼!!");
+                $("#log_pwd").focus();
+            } else {
+                // 判斷是否要記住帳號密碼
+                if ($("#memory").is(":checked")) {
+                    $.cookie("CheckMember", "true", {
+                        expires: 7,
+                        path: '/'
+                    }); // 存儲cookie(7天)
+                    $.cookie("loginAccount", $('#log_account').val(), {
+                        expires: 7,
+                        path: '/'
+                    });
+                } else {
+                    $.cookie("CheckMember", "false", {
+                        expires: -1,
+                        path: '/'
+                    });
+                    $.cookie("loginAccount", '', {
+                        expires: -1,
+                        path: '/'
+                    });
+                }
+                //return true;
+                $.post("../member/member_1.jsp", {
+                    code: "login",
+                    qaccount: $('#log_account').val(),
+                    qpwd: $('#log_pwd').val(),
+                    async: false
+                }, function (res) {
+                    var jsonObj = JSON.parse(res); // 將JSON格式資料轉為物件
+                    if ("acpd" == jsonObj.status) {
+                        alert("帳號、密碼錯誤，請重新輸入!!");
+                    } else if ("status" == jsonObj.status) {
+                        alert("帳號已被停權，若有疑問請聯絡客服 !!");
+                    } else if ("OK" == jsonObj.status) {
+                        alert("您已成功登入!!");
+                        location.reload();
+                    }
+                });
+            }
+        }
+
+        function checkforget(F) {
+            if (F.qaccount.value == "" || !isEmail.test(F.qaccount.value)) {
+                alert("請輸入正確的帳號!!");
+                F.qaccount.focus();
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+    <div class="footer">
+
+        <!--浮動按鈕區塊-->
+        <div class="topBtn_area">
+
+            <!--浮動寄信鍵-->
+            <!--<div class="phoneBtn">
+				<a href="tel:0229125579">
+                    <img src="../images/service_icon.png" width="64" height="64" />
+                </a>
+                
+                 
+                <div class="tab_description">
+                    客服專線
+                </div>
+            </div>-->
+
+            <!--浮動top鍵-->
+            <div class="topBtn">
+                <a href="#top">
+                    <span>TOP</span>
+                </a>
+
+                <!--標籤說明-->
+                <div class="tab_description">
+                    回到上方
+                </div>
+            </div>
+        </div>
+
+        <!--版權宣告-->
+        <div class="copyright">
+            <div class="wrap">
+                © 2020 <a target="_blank" href="https://www.geneinfo.com.tw">Greatest Idea Strategy Co.,Ltd</a> All
+                rights reserved.
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!--會員登入區-->
+    <div class="member_login_area">
+        <div class="mL_info">
+
+            <div class="mL_close">
+                X
+            </div>
+            <form name="form0" method="post">
+                <div class="mLI_logo">
+                    <img src="../images/logo_2.png" height="68" />
+                </div>
+
+                <div class="mLI_input">
+                    <input type="text" name="qaccount" id="log_account" placeholder="帳號(E-mail)" />
+                </div>
+                <div class="mLI_input">
+                    <input type="password" name="qpwd" id="log_pwd" placeholder="密碼" />
+                </div>
+                <div class="mLI_input">
+                    <label>
+                        <input type="checkbox" id="memory" />
+                        記住帳號
+                    </label>
+                </div>
+
+                <div class="mLI_btn">
+                    <input type="button" value="登入" onclick="checkform(this);" />
+                    <input type="button" value="加入會員" onclick="location='../member/add.jsp'" />
+
+                    <div class="clearfloat">
+                    </div>
+                </div>
+            </form>
+            <hr />
+
+            <div class="mLI_tit">
+                忘記您的密碼了?
+            </div>
+            <form name="form0" method="post" action="../member/member_1.jsp?code=Forget"
+                onsubmit="return checkforget(this);">
+                <div class="mLI_input">
+                    <input type="text" name="qaccount" placeholder="帳號(E-mail)" />
+                </div>
+
+                <div class="mLI_btn mLI_btn_2">
+                    <input type="submit" value="重新取得密碼" />
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

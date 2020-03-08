@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #title {
+            font-weight: bold;
+            font-family: fantasy;
+        }
+
+        input {
+            width: 50px;
+        }
+    </style>
+
+    <script>
+        var strConstellation;
+
+        function ShowCard() {
+            var txtYear = document.getElementById('txtYear').value;
+            var txtMonth = document.getElementById('txtMonth').value;
+            var txtDay = document.getElementById('txtDay').value;
+
+            var Total;
+            var strTotal;
+            var People, CardInx, Soul, Love, Money;
+            var strResult, strCardName;
+            Total = Number(txtYear) + Number(txtMonth) + Number(txtDay);
+            strTotal = Total.toString();
+
+            People = 0;
+            for (iLp = 0; iLp < 4; iLp++) {
+                People += Number(strTotal.substring(iLp, iLp + 1));
+            }
+
+            // 人格牌
+            strResult = "";
+            if (People <= 22) {
+                strCardName = CardName(People);
+                strResult += "人格牌:" + strCardName;
+
+                strTotal = People.toString();
+                CardInx = 0;
+                for (iLp = 0; iLp < 2; iLp++) {
+                    CardInx += Number(strTotal.substring(iLp, iLp + 1));
+                }
+                if (CardInx == 10) CardInx = 1;
+
+                strCardName = CardName(CardInx);
+                strResult += "<br>靈魂牌:" + strCardName;
+
+                Soul = CardInx;
+            } else {
+                // 大餘 22 相併數
+                strTotal = People.toString();
+                CardInx = 0;
+                for (iLp = 0; iLp < 2; iLp++) {
+                    CardInx += Number(strTotal.substring(iLp, iLp + 1));
+                }
+                strCardName = CardName(CardInx);
+
+                strResult += "人格牌:" + strCardName;
+                strResult += "<br>靈魂牌:" + strCardName;
+
+                Soul = CardInx;
+            }
+
+            // 愛情牌
+            Love = Soul + Number(txtMonth);
+            if (Love <= 22) {
+                strCardName = CardName(Love);
+                strResult += "<br>愛情牌:" + strCardName;
+            } else {
+                Love -= 22;
+                strCardName = CardName(Love);
+                strResult += "<br>愛情牌:" + strCardName;
+            }
+
+            // 財富牌
+            Money = Soul + Number(txtDay);
+            if (Money <= 22) {
+                strCardName = CardName(Money);
+                strResult += "<br>財富牌:" + strCardName;
+            } else {
+                Money -= 22;
+                strCardName = CardName(Money);
+                strResult += "<br>財富牌:" + strCardName;
+            }
+
+            var d = new Date();
+            var currentYear = d.getFullYear();
+
+            Total = currentYear + Number(txtMonth) + Number(txtDay);
+            strTotal = Total.toString();
+
+            People = 0;
+            for (iLp = 0; iLp < 4; iLp++) {
+                People += Number(strTotal.substring(iLp, iLp + 1));
+            }
+
+            // 流年牌
+            if (People <= 22) {
+                strCardName = CardName(People);
+                strResult += "<br>" + currentYear.toString() + " 流年牌:" + strCardName;
+            } else {
+                People -= 22;
+                strCardName = CardName(People);
+                strResult += "<br>" + currentYear.toString() + " 流年牌:" + strCardName;
+            }
+
+            var nextYear = d.getFullYear() + 1;
+
+            Total = nextYear + Number(txtMonth) + Number(txtDay);
+            strTotal = Total.toString();
+
+            People = 0;
+            for (iLp = 0; iLp < 4; iLp++) {
+                People += Number(strTotal.substring(iLp, iLp + 1));
+            }
+
+            // 流年牌
+            if (People <= 22) {
+                strCardName = CardName(People);
+                strResult += "<br>" + nextYear.toString() + " 流年牌:" + strCardName;
+            } else {
+                People -= 22;
+                strCardName = CardName(People);
+                strResult += "<br>" + nextYear.toString() + " 流年牌:" + strCardName;
+            }
+
+            //alert(strResult);
+
+            //document.getElementById("demo").innerText = strResult;
+
+            document.all('labResult').innerHTML = strResult;
+
+        }
+
+        function CardName(Number) {
+            var strCardName;
+            switch (Number) {
+                case 1:
+                    strCardName = "魔術師";
+                    break;
+
+                case 2:
+                    strCardName = "女祭司";
+                    break;
+
+                case 3:
+                    strCardName = "皇后";
+                    break;
+
+                case 4:
+                    strCardName = "皇帝";
+                    break;
+
+                case 5:
+                    strCardName = "教皇";
+                    break;
+
+                case 6:
+                    strCardName = "戀人";
+                    break;
+
+                case 7:
+                    strCardName = "戰車";
+                    break;
+
+                case 8:
+                    strCardName = "力量";
+                    break;
+
+                case 9:
+                    strCardName = "隱者";
+                    break;
+
+                case 10:
+                    strCardName = "命運之輪";
+                    break;
+
+                case 11:
+                    strCardName = "正義";
+                    break;
+
+                case 12:
+                    strCardName = "吊人";
+                    break;
+
+                case 13:
+                    strCardName = "死神";
+                    break;
+
+                case 14:
+                    strCardName = "節制";
+                    break;
+
+                case 15:
+                    strCardName = "惡魔";
+                    break;
+
+                case 16:
+                    strCardName = "塔";
+                    break;
+
+                case 17:
+                    strCardName = "星星";
+                    break;
+
+                case 18:
+                    strCardName = "月亮";
+                    break;
+
+                case 19:
+                    strCardName = "太陽";
+                    break;
+
+                case 20:
+                    strCardName = "審判";
+                    break;
+
+                case 21:
+                    strCardName = "世界";
+                    break;
+
+                case 22:
+                    strCardName = "愚人";
+                    break;
+            }
+
+            return strCardName;
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="title">塔羅數計算機</h1>
+    <hr>
+    <section class="input-section">
+        <header id="header">請輸入出生年月日:</header>
+        <div>
+            <input id="txtYear" type="text" value="1980" placeholder="1980"><label>年</label>
+            <input id="txtMonth" type="text" value="1" placeholder="1"><label>月</label>
+            <input id="txtDay" type="text" value="1" placeholder="1"><label>日</label>
+            <button id="submit" onclick="ShowCard()">Calculate</button>
+        </div>
+    </section>
+    <section class="result-section">
+        <header id="header">分析:</header>
+        <article class="result">
+            <label id="labResult"></label>
+        </article>
+    </section>
+</body>
+
+</html>
