@@ -156,13 +156,57 @@
     border-radius: 50%;
   }
 
-  .sparkle {
+  .left-sparkle {
+    top: 25%;
+    left: 15%;
+    background: white;
+    width: 35%;
+    height: 35%;
+    border-radius: 50%;
+  }
+
+  .right-sparkle {
     top: 25%;
     left: -23%;
     background: white;
     width: 150%;
     height: 100%;
     border-radius: 50%;
+    animation-duration: 1s;
+    animation-name: blink;
+    animation-iteration-count: 2;
+    transform-origin: 0% 0%;
+    animation-timing-function: linear;
+    animation-play-state: running;
+  }
+
+  @keyframes blink {
+    0% {
+      top: 25%;
+      left: -23%;
+      background: white;
+      width: 150%;
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    5% {
+      top: 25%;
+      left: 15%;
+      background: white;
+      width: 35%;
+      height: 35%;
+      border-radius: 50%;
+    }
+
+    10% {
+      top: 25%;
+      left: -23%;
+      background: white;
+      width: 150%;
+      height: 100%;
+      border-radius: 50%;
+    }
   }
 
   .blush-right {
@@ -221,10 +265,10 @@
     <div class="left-cheek"></div>
     <div class="belly"></div>
     <div class="right-eye">
-      <div class="sparkle"></div>
+      <div class="right-sparkle"></div>
     </div>
     <div class="left-eye">
-      <div class="sparkle"></div>
+      <div class="left-sparkle"></div>
     </div>
     <div class="blush-right"></div>
     <div class="blush-left"></div>
