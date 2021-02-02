@@ -9,14 +9,24 @@
     animation-duration: 2s;
     animation-iteration-count: infinite;
   }
+  #green {
+    background: green;
+    left: 10%;
+    animation-timing-function: cubic-bezier(0, 0, 1, 1);
+  }
+  #yellow {
+    background: yellow;
+    left: 20%;
+    animation-timing-function: linear;
+  }
   #red {
     background: red;
-    left: 27%;
+    left: 30%;
     animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
   }
   #blue {
     background: blue;
-    left: 56%;
+    left: 40%;
     animation-timing-function: ease-out;
   }
   @keyframes bounce {
@@ -28,5 +38,7 @@
     }
   }
 </style>
+<div class="balls" id= "green"></div>
+<div class="balls" id= "yellow"></div>
 <div class="balls" id= "red"></div>
 <div class="balls" id= "blue"></div>

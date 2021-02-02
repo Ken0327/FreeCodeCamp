@@ -1,19 +1,27 @@
 <style>
-
-  div{
+  #sample1 {
     border-radius: 20px;
     width: 70%;
-    height: 400px;
-    margin:  50 auto;
-    background: repeating-linear-gradient(
-      45deg,
-      yellow 0px,
-      yellow 40px,
-      black 40px,
-      black 80px
-    );
+    height: 200px;
+    margin: 50 auto;
+    background: repeating-linear-gradient(45deg,
+        yellow 0px,
+        yellow 40px,
+        black 40px,
+        black 80px);
   }
 
+  #sample2 {
+    border-radius: 20px;
+    width: 70%;
+    height: 200px;
+    margin: 50 auto;
+    background: radial-gradient(circle at 50%, #333, #333 50%, #eee 75%, #333 75%);
+  }  
 </style>
 
-<div></div>
+<head></head>
+<div>
+  <div id="sample1"></div>
+  <div id="sample2"></div>
+</div>
